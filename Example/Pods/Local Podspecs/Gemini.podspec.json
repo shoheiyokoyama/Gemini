@@ -1,0 +1,22 @@
+{
+  "name": "Gemini",
+  "version": "0.1.0",
+  "summary": "A short description of Gemini.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/shoheiyokoyama/Gemini",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "shoheiyokoyama": "shohei.yok0602@gmail.com"
+  },
+  "source": {
+    "git": "https://github.com/shoheiyokoyama/Gemini.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "8.0"
+  },
+  "source_files": "Gemini/Classes/**/*"
+}

@@ -1,0 +1,16 @@
+PODS:
+  - Gemini (0.1.0)
+
+DEPENDENCIES:
+  - Gemini (from `../`)
+
+EXTERNAL SOURCES:
+  Gemini:
+    :path: ../
+
+SPEC CHECKSUMS:
+  Gemini: f18751eeb03f2c894889ddc9dfa6909c986a2afd
+
+PODFILE CHECKSUM: ed59de254d21019fd9e08cb8722fd3cf8cec353a
+
+COCOAPODS: 1.2.1
