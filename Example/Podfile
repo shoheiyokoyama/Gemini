@@ -1,11 +1,5 @@
 use_frameworks!
 
 target 'Gemini_Example' do
-  pod 'Gemini', :path => '../'
-
-  target 'Gemini_Tests' do
-    inherit! :search_paths
-
-    
-  end
+    pod 'Gemini', :path => '../'
 end

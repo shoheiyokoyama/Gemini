@@ -1,42 +1,23 @@
-#
-# Be sure to run `pod lib lint Gemini.podspec' to ensure this is a
-# valid spec before submitting.
-#
-# Any lines starting with a # are optional, but their use is encouraged
-# To learn more about a Podspec see http://guides.cocoapods.org/syntax/podspec.html
-#
-
 Pod::Spec.new do |s|
   s.name             = 'Gemini'
-  s.version          = '0.1.0'
-  s.summary          = 'A short description of Gemini.'
+  s.version          = '1.0.0'
+  s.summary          = 'Gemini is rich scroll animation framework for iOS, written in Swift.'
+  s.description       = <<-DESC
+Gemini is rich scroll animation framework for iOS, written in Swift. 
 
-# This description is used to generate tags and improve search results.
-#   * Think: What does it do? Why did you write it? What is the focus?
-#   * Try to keep it short, snappy and to the point.
-#   * Write the description between the DESC delimiters below.
-#   * Finally, don't worry about the indent, CocoaPods strips it!
+You can easily use GeminiCollectionView, which is a subclass of UICollectionView.
 
-  s.description      = <<-DESC
-TODO: Add long description of the pod here.
-                       DESC
+You are available multiple animation which has various and customizable properties, and moreover can create your own custom scroll animation.
+
+Gemini also provide a fluent interface based on method chaining. you can use this intuitvely and simply.
+                        DESC
 
   s.homepage         = 'https://github.com/shoheiyokoyama/Gemini'
-  # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'shoheiyokoyama' => 'shohei.yok0602@gmail.com' }
   s.source           = { :git => 'https://github.com/shoheiyokoyama/Gemini.git', :tag => s.version.to_s }
-  # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
   s.ios.deployment_target = '8.0'
 
-  s.source_files = 'Gemini/Classes/**/*'
-  
-  # s.resource_bundles = {
-  #   'Gemini' => ['Gemini/Assets/*.png']
-  # }
-
-  # s.public_header_files = 'Pod/Classes/**/*.h'
-  # s.frameworks = 'UIKit', 'MapKit'
-  # s.dependency 'AFNetworking', '~> 2.3'
+  s.source_files = 'Gemini/**/*'
 end
