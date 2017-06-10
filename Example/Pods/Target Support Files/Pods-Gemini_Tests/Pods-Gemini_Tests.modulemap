@@ -1,6 +1,0 @@
-framework module Pods_Gemini_Tests {
-  umbrella header "Pods-Gemini_Tests-umbrella.h"
-
-  export *
-  module * { export * }
-}

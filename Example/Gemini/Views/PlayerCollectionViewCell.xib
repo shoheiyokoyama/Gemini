@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12121" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="PlayerCollectionViewCell" customModule="Gemini_Example" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="203" height="146"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="203" height="146"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="e1G-GA-UdM" customClass="PlayerView" customModule="Gemini_Example" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="0.0" width="203" height="146"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <view alpha="0.0" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tQF-Oa-1bg">
+                        <rect key="frame" x="0.0" y="0.0" width="203" height="146"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="tQF-Oa-1bg" secondAttribute="trailing" id="Hj3-r5-Paq"/>
+                <constraint firstItem="e1G-GA-UdM" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="I1e-ft-gQo"/>
+                <constraint firstItem="tQF-Oa-1bg" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="I94-bz-yFu"/>
+                <constraint firstAttribute="bottom" secondItem="e1G-GA-UdM" secondAttribute="bottom" id="IZr-J3-IY8"/>
+                <constraint firstItem="tQF-Oa-1bg" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="Lvt-ok-Rb7"/>
+                <constraint firstAttribute="trailing" secondItem="e1G-GA-UdM" secondAttribute="trailing" id="QiV-1L-Vjz"/>
+                <constraint firstAttribute="bottom" secondItem="tQF-Oa-1bg" secondAttribute="bottom" id="T3N-1g-nEZ"/>
+                <constraint firstItem="e1G-GA-UdM" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="pNl-Dl-rmR"/>
+            </constraints>
+            <size key="customSize" width="203" height="146"/>
+            <connections>
+                <outlet property="blackShadowView" destination="tQF-Oa-1bg" id="Kni-d9-hZv"/>
+                <outlet property="playerView" destination="e1G-GA-UdM" id="olW-TL-pkK"/>
+            </connections>
+            <point key="canvasLocation" x="-42.5" y="104"/>
+        </collectionViewCell>
+    </objects>
+</document>

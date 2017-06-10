@@ -7,14 +7,35 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		454273829BF7345C596AA23E /* Pods_Gemini_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C50DF28739E7E8D79611E88C /* Pods_Gemini_Tests.framework */; };
 		607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD51AFB9204008FA782 /* AppDelegate.swift */; };
-		607FACD81AFB9204008FA782 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD71AFB9204008FA782 /* ViewController.swift */; };
 		607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 607FACD91AFB9204008FA782 /* Main.storyboard */; };
 		607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDC1AFB9204008FA782 /* Images.xcassets */; };
 		607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDE1AFB9204008FA782 /* LaunchScreen.xib */; };
 		607FACEC1AFB9204008FA782 /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACEB1AFB9204008FA782 /* Tests.swift */; };
 		C2E70C84CC3B13E50153265F /* Pods_Gemini_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A0CFC5AA4AA6E6F0B0FB5B1 /* Pods_Gemini_Example.framework */; };
+		E0F588601F09437F006266A3 /* ImageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0F5885B1F09437F006266A3 /* ImageCollectionViewCell.swift */; };
+		E0F588611F09437F006266A3 /* ImageCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E0F5885C1F09437F006266A3 /* ImageCollectionViewCell.xib */; };
+		E0F588621F09437F006266A3 /* PlayerCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0F5885D1F09437F006266A3 /* PlayerCollectionViewCell.swift */; };
+		E0F588631F09437F006266A3 /* PlayerCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E0F5885E1F09437F006266A3 /* PlayerCollectionViewCell.xib */; };
+		E0F588641F09437F006266A3 /* PlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0F5885F1F09437F006266A3 /* PlayerView.swift */; };
+		E0F588761F0943F2006266A3 /* AnimationListViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E0F588661F0943F2006266A3 /* AnimationListViewController.storyboard */; };
+		E0F588771F0943F2006266A3 /* AnimationListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0F588671F0943F2006266A3 /* AnimationListViewController.swift */; };
+		E0F588781F0943F2006266A3 /* CircleRotationViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E0F588681F0943F2006266A3 /* CircleRotationViewController.storyboard */; };
+		E0F588791F0943F2006266A3 /* CircleRotationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0F588691F0943F2006266A3 /* CircleRotationViewController.swift */; };
+		E0F5887A1F0943F2006266A3 /* CubeViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E0F5886A1F0943F2006266A3 /* CubeViewController.storyboard */; };
+		E0F5887B1F0943F2006266A3 /* CubeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0F5886B1F0943F2006266A3 /* CubeViewController.swift */; };
+		E0F5887C1F0943F2006266A3 /* CustomAnimationViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E0F5886C1F0943F2006266A3 /* CustomAnimationViewController.storyboard */; };
+		E0F5887D1F0943F2006266A3 /* CustomAnimationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0F5886D1F0943F2006266A3 /* CustomAnimationViewController.swift */; };
+		E0F5887E1F0943F2006266A3 /* PitchRotationViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E0F5886E1F0943F2006266A3 /* PitchRotationViewController.storyboard */; };
+		E0F5887F1F0943F2006266A3 /* PitchRotationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0F5886F1F0943F2006266A3 /* PitchRotationViewController.swift */; };
+		E0F588801F0943F2006266A3 /* RollRotationViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E0F588701F0943F2006266A3 /* RollRotationViewController.storyboard */; };
+		E0F588811F0943F2006266A3 /* RollRotationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0F588711F0943F2006266A3 /* RollRotationViewController.swift */; };
+		E0F588821F0943F2006266A3 /* ScaleAnimationViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E0F588721F0943F2006266A3 /* ScaleAnimationViewController.storyboard */; };
+		E0F588831F0943F2006266A3 /* ScaleAnimationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0F588731F0943F2006266A3 /* ScaleAnimationViewController.swift */; };
+		E0F588841F0943F2006266A3 /* YawRotationViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E0F588741F0943F2006266A3 /* YawRotationViewController.storyboard */; };
+		E0F588851F0943F2006266A3 /* YawRotationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0F588751F0943F2006266A3 /* YawRotationViewController.swift */; };
+		E0F588871F094421006266A3 /* UICollectionViewPagingFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0F588861F094421006266A3 /* UICollectionViewPagingFlowLayout.swift */; };
+		E0F5888A1F09445E006266A3 /* ResourceModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0F588891F09445E006266A3 /* ResourceModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -28,13 +49,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		08DA9BDD6A7F0CCDCC751C2A /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		08DA9BDD6A7F0CCDCC751C2A /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		0A0CFC5AA4AA6E6F0B0FB5B1 /* Pods_Gemini_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Gemini_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		39E33D800C43D003A088EBB5 /* Pods-Gemini_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Gemini_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Gemini_Tests/Pods-Gemini_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		607FACD01AFB9204008FA782 /* Gemini_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Gemini_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACD41AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACD51AFB9204008FA782 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		607FACD71AFB9204008FA782 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		607FACDA1AFB9204008FA782 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		607FACDC1AFB9204008FA782 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		607FACDF1AFB9204008FA782 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
@@ -44,9 +63,31 @@
 		B07118E391269AB9152C5314 /* Pods-Gemini_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Gemini_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Gemini_Example/Pods-Gemini_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		C4918BBF4257A288EDE080AB /* Pods-Gemini_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Gemini_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-Gemini_Example/Pods-Gemini_Example.release.xcconfig"; sourceTree = "<group>"; };
 		C50DF28739E7E8D79611E88C /* Pods_Gemini_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Gemini_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		EEF2A7CE866B6998F9834652 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; name = README.md; path = ../README.md; sourceTree = "<group>"; };
-		F49B6109CEDA4448DCC7EEBF /* Gemini.podspec */ = {isa = PBXFileReference; includeInIndex = 1; name = Gemini.podspec; path = ../Gemini.podspec; sourceTree = "<group>"; };
-		F5AD7266BF764BA4DBDCCECC /* Pods-Gemini_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Gemini_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Gemini_Tests/Pods-Gemini_Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		E0F5885B1F09437F006266A3 /* ImageCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageCollectionViewCell.swift; sourceTree = "<group>"; };
+		E0F5885C1F09437F006266A3 /* ImageCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ImageCollectionViewCell.xib; sourceTree = "<group>"; };
+		E0F5885D1F09437F006266A3 /* PlayerCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayerCollectionViewCell.swift; sourceTree = "<group>"; };
+		E0F5885E1F09437F006266A3 /* PlayerCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PlayerCollectionViewCell.xib; sourceTree = "<group>"; };
+		E0F5885F1F09437F006266A3 /* PlayerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayerView.swift; sourceTree = "<group>"; };
+		E0F588661F0943F2006266A3 /* AnimationListViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = AnimationListViewController.storyboard; path = ViewControllers/AnimationListViewController.storyboard; sourceTree = "<group>"; };
+		E0F588671F0943F2006266A3 /* AnimationListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AnimationListViewController.swift; path = ViewControllers/AnimationListViewController.swift; sourceTree = "<group>"; };
+		E0F588681F0943F2006266A3 /* CircleRotationViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = CircleRotationViewController.storyboard; path = ViewControllers/CircleRotationViewController.storyboard; sourceTree = "<group>"; };
+		E0F588691F0943F2006266A3 /* CircleRotationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CircleRotationViewController.swift; path = ViewControllers/CircleRotationViewController.swift; sourceTree = "<group>"; };
+		E0F5886A1F0943F2006266A3 /* CubeViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = CubeViewController.storyboard; path = ViewControllers/CubeViewController.storyboard; sourceTree = "<group>"; };
+		E0F5886B1F0943F2006266A3 /* CubeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CubeViewController.swift; path = ViewControllers/CubeViewController.swift; sourceTree = "<group>"; };
+		E0F5886C1F0943F2006266A3 /* CustomAnimationViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = CustomAnimationViewController.storyboard; path = ViewControllers/CustomAnimationViewController.storyboard; sourceTree = "<group>"; };
+		E0F5886D1F0943F2006266A3 /* CustomAnimationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CustomAnimationViewController.swift; path = ViewControllers/CustomAnimationViewController.swift; sourceTree = "<group>"; };
+		E0F5886E1F0943F2006266A3 /* PitchRotationViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = PitchRotationViewController.storyboard; path = ViewControllers/PitchRotationViewController.storyboard; sourceTree = "<group>"; };
+		E0F5886F1F0943F2006266A3 /* PitchRotationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PitchRotationViewController.swift; path = ViewControllers/PitchRotationViewController.swift; sourceTree = "<group>"; };
+		E0F588701F0943F2006266A3 /* RollRotationViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = RollRotationViewController.storyboard; path = ViewControllers/RollRotationViewController.storyboard; sourceTree = "<group>"; };
+		E0F588711F0943F2006266A3 /* RollRotationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RollRotationViewController.swift; path = ViewControllers/RollRotationViewController.swift; sourceTree = "<group>"; };
+		E0F588721F0943F2006266A3 /* ScaleAnimationViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = ScaleAnimationViewController.storyboard; path = ViewControllers/ScaleAnimationViewController.storyboard; sourceTree = "<group>"; };
+		E0F588731F0943F2006266A3 /* ScaleAnimationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ScaleAnimationViewController.swift; path = ViewControllers/ScaleAnimationViewController.swift; sourceTree = "<group>"; };
+		E0F588741F0943F2006266A3 /* YawRotationViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = YawRotationViewController.storyboard; path = ViewControllers/YawRotationViewController.storyboard; sourceTree = "<group>"; };
+		E0F588751F0943F2006266A3 /* YawRotationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = YawRotationViewController.swift; path = ViewControllers/YawRotationViewController.swift; sourceTree = "<group>"; };
+		E0F588861F094421006266A3 /* UICollectionViewPagingFlowLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UICollectionViewPagingFlowLayout.swift; sourceTree = "<group>"; };
+		E0F588891F09445E006266A3 /* ResourceModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResourceModel.swift; sourceTree = "<group>"; };
+		EEF2A7CE866B6998F9834652 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		F49B6109CEDA4448DCC7EEBF /* Gemini.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Gemini.podspec; path = ../Gemini.podspec; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,7 +103,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				454273829BF7345C596AA23E /* Pods_Gemini_Tests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -102,8 +142,10 @@
 		607FACD21AFB9204008FA782 /* Example for Gemini */ = {
 			isa = PBXGroup;
 			children = (
+				E0F588651F094395006266A3 /* ViewControllers */,
+				E0F5885A1F094336006266A3 /* Views */,
+				E0F588881F094439006266A3 /* Model */,
 				607FACD51AFB9204008FA782 /* AppDelegate.swift */,
-				607FACD71AFB9204008FA782 /* ViewController.swift */,
 				607FACD91AFB9204008FA782 /* Main.storyboard */,
 				607FACDC1AFB9204008FA782 /* Images.xcassets */,
 				607FACDE1AFB9204008FA782 /* LaunchScreen.xib */,
@@ -153,10 +195,52 @@
 			children = (
 				B07118E391269AB9152C5314 /* Pods-Gemini_Example.debug.xcconfig */,
 				C4918BBF4257A288EDE080AB /* Pods-Gemini_Example.release.xcconfig */,
-				F5AD7266BF764BA4DBDCCECC /* Pods-Gemini_Tests.debug.xcconfig */,
-				39E33D800C43D003A088EBB5 /* Pods-Gemini_Tests.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		E0F5885A1F094336006266A3 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				E0F5885B1F09437F006266A3 /* ImageCollectionViewCell.swift */,
+				E0F5885C1F09437F006266A3 /* ImageCollectionViewCell.xib */,
+				E0F5885D1F09437F006266A3 /* PlayerCollectionViewCell.swift */,
+				E0F5885E1F09437F006266A3 /* PlayerCollectionViewCell.xib */,
+				E0F5885F1F09437F006266A3 /* PlayerView.swift */,
+				E0F588861F094421006266A3 /* UICollectionViewPagingFlowLayout.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		E0F588651F094395006266A3 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				E0F588661F0943F2006266A3 /* AnimationListViewController.storyboard */,
+				E0F588671F0943F2006266A3 /* AnimationListViewController.swift */,
+				E0F588681F0943F2006266A3 /* CircleRotationViewController.storyboard */,
+				E0F588691F0943F2006266A3 /* CircleRotationViewController.swift */,
+				E0F5886A1F0943F2006266A3 /* CubeViewController.storyboard */,
+				E0F5886B1F0943F2006266A3 /* CubeViewController.swift */,
+				E0F5886C1F0943F2006266A3 /* CustomAnimationViewController.storyboard */,
+				E0F5886D1F0943F2006266A3 /* CustomAnimationViewController.swift */,
+				E0F5886E1F0943F2006266A3 /* PitchRotationViewController.storyboard */,
+				E0F5886F1F0943F2006266A3 /* PitchRotationViewController.swift */,
+				E0F588701F0943F2006266A3 /* RollRotationViewController.storyboard */,
+				E0F588711F0943F2006266A3 /* RollRotationViewController.swift */,
+				E0F588721F0943F2006266A3 /* ScaleAnimationViewController.storyboard */,
+				E0F588731F0943F2006266A3 /* ScaleAnimationViewController.swift */,
+				E0F588741F0943F2006266A3 /* YawRotationViewController.storyboard */,
+				E0F588751F0943F2006266A3 /* YawRotationViewController.swift */,
+			);
+			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		E0F588881F094439006266A3 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				E0F588891F09445E006266A3 /* ResourceModel.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -186,12 +270,9 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 607FACF21AFB9204008FA782 /* Build configuration list for PBXNativeTarget "Gemini_Tests" */;
 			buildPhases = (
-				FCCF634FC64C52BC275D12AE /* [CP] Check Pods Manifest.lock */,
 				607FACE11AFB9204008FA782 /* Sources */,
 				607FACE21AFB9204008FA782 /* Frameworks */,
 				607FACE31AFB9204008FA782 /* Resources */,
-				6F6E7F162D5B9DDCAAA20818 /* [CP] Embed Pods Frameworks */,
-				8167F91193298A5299239058 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -220,6 +301,7 @@
 					607FACE41AFB9204008FA782 = {
 						CreatedOnToolsVersion = 6.3.1;
 						LastSwiftMigration = 0820;
+						ProvisioningStyle = Automatic;
 						TestTargetID = 607FACCF1AFB9204008FA782;
 					};
 				};
@@ -248,8 +330,18 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E0F5887E1F0943F2006266A3 /* PitchRotationViewController.storyboard in Resources */,
 				607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */,
 				607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */,
+				E0F588781F0943F2006266A3 /* CircleRotationViewController.storyboard in Resources */,
+				E0F588841F0943F2006266A3 /* YawRotationViewController.storyboard in Resources */,
+				E0F588611F09437F006266A3 /* ImageCollectionViewCell.xib in Resources */,
+				E0F588761F0943F2006266A3 /* AnimationListViewController.storyboard in Resources */,
+				E0F588801F0943F2006266A3 /* RollRotationViewController.storyboard in Resources */,
+				E0F5887C1F0943F2006266A3 /* CustomAnimationViewController.storyboard in Resources */,
+				E0F588631F09437F006266A3 /* PlayerCollectionViewCell.xib in Resources */,
+				E0F588821F0943F2006266A3 /* ScaleAnimationViewController.storyboard in Resources */,
+				E0F5887A1F0943F2006266A3 /* CubeViewController.storyboard in Resources */,
 				607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -279,21 +371,6 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
-		6F6E7F162D5B9DDCAAA20818 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Gemini_Tests/Pods-Gemini_Tests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		712176B1A6C30BC734868517 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -307,21 +384,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Gemini_Example/Pods-Gemini_Example-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		8167F91193298A5299239058 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Gemini_Tests/Pods-Gemini_Tests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		922C5D12B31DFD2DA2DEC1D8 /* [CP] Embed Pods Frameworks */ = {
@@ -339,21 +401,6 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Gemini_Example/Pods-Gemini_Example-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		FCCF634FC64C52BC275D12AE /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -361,8 +408,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				607FACD81AFB9204008FA782 /* ViewController.swift in Sources */,
+				E0F588621F09437F006266A3 /* PlayerCollectionViewCell.swift in Sources */,
+				E0F5887D1F0943F2006266A3 /* CustomAnimationViewController.swift in Sources */,
+				E0F588791F0943F2006266A3 /* CircleRotationViewController.swift in Sources */,
+				E0F588601F09437F006266A3 /* ImageCollectionViewCell.swift in Sources */,
+				E0F588851F0943F2006266A3 /* YawRotationViewController.swift in Sources */,
+				E0F588771F0943F2006266A3 /* AnimationListViewController.swift in Sources */,
+				E0F5888A1F09445E006266A3 /* ResourceModel.swift in Sources */,
 				607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */,
+				E0F588811F0943F2006266A3 /* RollRotationViewController.swift in Sources */,
+				E0F588641F09437F006266A3 /* PlayerView.swift in Sources */,
+				E0F5887F1F0943F2006266A3 /* PitchRotationViewController.swift in Sources */,
+				E0F588831F0943F2006266A3 /* ScaleAnimationViewController.swift in Sources */,
+				E0F5887B1F0943F2006266A3 /* CubeViewController.swift in Sources */,
+				E0F588871F094421006266A3 /* UICollectionViewPagingFlowLayout.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -496,6 +555,7 @@
 			baseConfigurationReference = B07118E391269AB9152C5314 /* Pods-Gemini_Example.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = Gemini/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
@@ -510,6 +570,7 @@
 			baseConfigurationReference = C4918BBF4257A288EDE080AB /* Pods-Gemini_Example.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = Gemini/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
@@ -521,8 +582,9 @@
 		};
 		607FACF31AFB9204008FA782 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F5AD7266BF764BA4DBDCCECC /* Pods-Gemini_Tests.debug.xcconfig */;
 			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = "";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -535,14 +597,16 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
 		607FACF41AFB9204008FA782 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 39E33D800C43D003A088EBB5 /* Pods-Gemini_Tests.release.xcconfig */;
 			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = "";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -551,6 +615,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
