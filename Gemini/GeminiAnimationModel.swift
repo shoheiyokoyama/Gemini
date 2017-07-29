@@ -34,7 +34,7 @@ enum GeminiScrollDirection {
 }
 
 public protocol Gemini {
-    /// `isEnabled` is false if `animation` is GeminiAnimation.one
+    /// `isEnabled` is false if `animation` is GeminiAnimation.none
     var isEnabled: Bool { get }
 
     /// GeminiAnimation
@@ -179,9 +179,9 @@ final class GeminiAnimationModel {
     }
 
     func backgroundColor(withDistanceRatio ratio: CGFloat) -> UIColor? {
-        /// sc = Start backgroundColor components
+        // sc = Start backgroundColor components
         let sc = startBackgroundColor?.cgColor.components ?? []
-        /// ec = End backgroundColor components
+        // ec = End backgroundColor components
         let ec = endBackgroundColor?.cgColor.components ?? []
 
         if sc.isEmpty || sc.count < 3 || ec.isEmpty || ec.count < 3 {
@@ -304,7 +304,7 @@ final class GeminiAnimationModel {
             return CATransform3DScale(transform3DIdentity, scale, scale, 0)
 
         case .custom:
-            /// Scale
+            // Scale
             let scaleX = calculatedScale(ofScale: scaleStore.x, withRatio: easingRatio)
             let scaleY = calculatedScale(ofScale: scaleStore.y, withRatio: easingRatio)
             let scaleZ = calculatedScale(ofScale: scaleStore.z, withRatio: easingRatio)
@@ -313,7 +313,7 @@ final class GeminiAnimationModel {
                                                     scaleStore.y == 1 ? 1 : scaleY,
                                                     scaleStore.z == 1 ? 1 : scaleZ)
 
-            /// Rotation
+            // Rotation
             let _vectorXDegree: CGFloat = max(0, min(90, rotationStore.x))
             let vectorXDegree: CGFloat  = _vectorXDegree * easingRatio
             let rotationX = CATransform3DRotate(transform3DIdentity,
@@ -334,7 +334,7 @@ final class GeminiAnimationModel {
 
             let concatedRotateTransform = CATransform3DConcat(rotationX, CATransform3DConcat(rotationY, rotationZ))
 
-            /// Translate
+            // Translate
             let translateX = easingRatio > 0 ? translationStore.x : -translationStore.x
             let translateY = easingRatio > 0 ? translationStore.y : -translationStore.y
             let translateZ = easingRatio > 0 ? translationStore.z : -translationStore.z

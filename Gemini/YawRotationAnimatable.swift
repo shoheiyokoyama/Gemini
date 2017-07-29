@@ -15,7 +15,7 @@ public enum YawRotationEffect {
 
 public protocol YawRotationAnimatable: ScaleAnimatable, EasingAnimatable, UIAppearanceAnimatable {
     /// The degree of rotation in the yaw direction. the default value is 90.0.
-    /// - seealso: [Pitch, roll, and yaw axes](https://github.com/shoheiyokoyama/Gemini/blob/master/Resources/attitude_rotation.png)
+    /// - SeeAlso: [Pitch, roll, and yaw axes](https://github.com/shoheiyokoyama/Assets/blob/master/Gemini/attitude_rotation.png)
     @discardableResult func degree(_ degree: CGFloat) -> YawRotationAnimatable
 
     /// The option of `GeminiAnimation.yawRotation`. the default value is `YawRotationEffect.yawUp`.

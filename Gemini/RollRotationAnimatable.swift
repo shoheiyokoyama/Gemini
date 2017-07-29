@@ -15,7 +15,7 @@ public enum RollRotationEffect {
 
 public protocol RollRotationAnimatable: ScaleAnimatable, EasingAnimatable, UIAppearanceAnimatable {
     /// The degree of rotation in the roll direction. the default value is 90.
-    /// - seealso: [Pitch, roll, and yaw axes](https://github.com/shoheiyokoyama/Gemini/blob/master/Resources/attitude_rotation.png)
+    /// - SeeAlso: [Pitch, roll, and yaw axes](https://github.com/shoheiyokoyama/Assets/blob/master/Gemini/attitude_rotation.png)
     @discardableResult func degree(_ degree: CGFloat) -> RollRotationAnimatable
 
     /// The option of `GeminiAnimation.rollRotation`. the default value is `RollRotationEffect.rollUp`.

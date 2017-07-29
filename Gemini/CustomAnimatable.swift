@@ -37,7 +37,7 @@ public protocol CustomAnimatable: EasingAnimatable, UIAppearanceAnimatable {
 
     /// The anchor point of the layer's bounds rectangle.
     /// The default value is (x: 0.5, y: 0.5).
-    /// - seealso: [anchorPoint on Apple Developer Documentation](https://developer.apple.com/documentation/quartzcore/calayer/1410817-anchorpoint)
+    /// - SeeAlso: [anchorPoint on Apple Developer Documentation](https://developer.apple.com/documentation/quartzcore/calayer/1410817-anchorpoint)
     @discardableResult func anchorPoint(_ anchorPoint: CGPoint) -> CustomAnimatable
 }
 
