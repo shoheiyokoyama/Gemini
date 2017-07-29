@@ -49,6 +49,8 @@ collectionView.gemini
 - [x] Completely `README`
 - [x] And More...
 
+#### [Run example app in your browser](https://appetize.io/app/4g62jzpxe6ht1qpugpu096h1ec?device=iphone7&scale=75&orientation=portrait&osVersion=10.3)
+
 # Contents
 - [Animation Types and properties](#anmation-types)
 - [Usage](#usage)
