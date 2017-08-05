@@ -49,7 +49,7 @@ final class PitchRotationViewController: UIViewController {
         // Setting of UICollectionViewFlowLayout
         let layout = UICollectionViewPagingFlowLayout()
         layout.scrollDirection = scrollDirection
-        layout.itemSize = CGSize(width: collectionView.bounds.width - 60, height: collectionView.bounds.height - 100)
+        layout.itemSize = CGSize(width: view.bounds.width - 60, height: view.bounds.height - 100)
         layout.sectionInset = UIEdgeInsets(top: 50, left: 30, bottom: 50, right: 30)
         layout.minimumLineSpacing = 30
         layout.minimumInteritemSpacing = 30

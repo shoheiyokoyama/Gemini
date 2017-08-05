@@ -45,7 +45,7 @@ final class RollRotationViewController: UIViewController {
         // Setting of UICollectionViewFlowLayout
         let layout = UICollectionViewPagingFlowLayout()
         layout.scrollDirection = scrollDirection
-        layout.itemSize = CGSize(width: collectionView.bounds.width - 60, height: collectionView.bounds.height - 100)
+        layout.itemSize = CGSize(width: view.bounds.width - 60, height: view.bounds.height - 100)
         layout.sectionInset = UIEdgeInsets(top: 50, left: 30, bottom: 50, right: 30)
         layout.minimumLineSpacing = 30
         layout.minimumInteritemSpacing = 30
@@ -62,8 +62,12 @@ final class RollRotationViewController: UIViewController {
         let colors: [CGColor] = [startColor.cgColor, endColor.cgColor]
         let gradientLayer = CAGradientLayer()
         gradientLayer.colors = colors
-        gradientLayer.frame.size = view.frame.size
+        gradientLayer.frame.size = view.bounds.size
         view.layer.insertSublayer(gradientLayer, at: 0)
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
     }
 
     func toggleNavigationBarHidden(_ gestureRecognizer: UITapGestureRecognizer) {

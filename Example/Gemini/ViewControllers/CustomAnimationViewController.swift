@@ -13,11 +13,11 @@ enum CustomAnimationType {
     case custom1
     case custom2
 
-    func layout(of collectionView: UICollectionView) -> UICollectionViewFlowLayout {
+    func layout(withParentView parentView: UIView) -> UICollectionViewFlowLayout {
         switch self {
         case .custom1:
             let layout = UICollectionViewPagingFlowLayout()
-            layout.itemSize = CGSize(width: collectionView.bounds.width - 100, height: collectionView.bounds.height - 200)
+            layout.itemSize = CGSize(width: parentView.bounds.width - 100, height: parentView.bounds.height - 200)
             layout.sectionInset = UIEdgeInsets(top: 0, left: 50, bottom: 0, right: 50)
             layout.minimumLineSpacing = 10
             layout.scrollDirection = .horizontal
@@ -26,9 +26,9 @@ enum CustomAnimationType {
             let layout = UICollectionViewFlowLayout()
             layout.itemSize = CGSize(width: 150, height: 150)
             layout.sectionInset = UIEdgeInsets(top: 15,
-                                               left: (collectionView.frame.width - 150) / 2,
+                                               left: (parentView.bounds.width - 150) / 2,
                                                bottom: 15,
-                                               right: (collectionView.frame.width - 150) / 2)
+                                               right: (parentView.bounds.width - 150) / 2)
             layout.minimumLineSpacing = 15
             layout.scrollDirection = .vertical
             return layout
@@ -68,10 +68,10 @@ final class CustomAnimationViewController: UIViewController {
 
         // Setting of UICollectionViewFlowLayout
         if animationType == .custom1 {
-            collectionView.collectionViewLayout = animationType.layout(of: collectionView)
+            collectionView.collectionViewLayout = animationType.layout(withParentView: view)
             collectionView.decelerationRate = UIScrollViewDecelerationRateFast
         } else {
-            collectionView.collectionViewLayout = animationType.layout(of: collectionView)
+            collectionView.collectionViewLayout = animationType.layout(withParentView: view)
         }
 
         // Setting of GeminiAnimation

@@ -49,9 +49,9 @@ final class YawRotationViewController: UIViewController {
         // Setting of UICollectionViewFlowLayout
         let layout = UICollectionViewPagingFlowLayout()
         layout.scrollDirection = scrollDirection
-        layout.itemSize = CGSize(width: collectionView.bounds.width - 50, height: collectionView.bounds.width - 50)
-        let cellHeight: CGFloat = collectionView.bounds.width - 50
-        layout.sectionInset = UIEdgeInsets(top: (collectionView.frame.height - cellHeight) / 2, left: 25, bottom: (collectionView.frame.height - cellHeight) / 2, right: 25)
+        layout.itemSize = CGSize(width: view.bounds.width - 50, height: view.bounds.width - 50)
+        let cellHeight: CGFloat = view.bounds.width - 50
+        layout.sectionInset = UIEdgeInsets(top: (view.bounds.height - cellHeight) / 2, left: 25, bottom: (view.bounds.height - cellHeight) / 2, right: 25)
         layout.minimumLineSpacing = 80
         layout.minimumInteritemSpacing = 80
         collectionView.collectionViewLayout = layout
