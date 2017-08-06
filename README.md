@@ -12,7 +12,7 @@
 
 It enables you to make multiple animation which has various and customizable properties, and moreover can create your own custom scroll animation. 
 
-`Gemini` also provides a fluent interface based on method chaining. you can use this intuitvely and simply.
+`Gemini` also provides a fluent interface based on method chaining. you can use this intuitively and simply.
 
 
 ```swift
