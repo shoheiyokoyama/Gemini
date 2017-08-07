@@ -9,7 +9,7 @@ You can easily use GeminiCollectionView, which is a subclass of UICollectionView
 
 You are available multiple animation which has various and customizable properties, and moreover can create your own custom scroll animation.
 
-Gemini also provide a fluent interface based on method chaining. you can use this intuitvely and simply.
+Gemini also provide a fluent interface based on method chaining. you can use this intuitively and simply.
                         DESC
 
   s.homepage         = 'https://github.com/shoheiyokoyama/Gemini'
