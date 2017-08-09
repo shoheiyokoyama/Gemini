@@ -50,8 +50,8 @@ final class CircleRotationViewController: UIViewController {
         }
 
         // Switch navigation bar hidden
-        navigationController?.setNavigationBarHidden(true, animated: false)
-        view.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(toggleNavigationBarHidden(_:))))
+        navigationController?.setNavigationBarHidden(false, animated: false)
+        //        view.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(toggleNavigationBarHidden(_:))))
     }
 
     func toggleNavigationBarHidden(_ gestureRecognizer: UITapGestureRecognizer) {
@@ -110,5 +110,9 @@ extension CircleRotationViewController: UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
         return 0
+    }
+
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        fatalError("This method is never called when you try to tap on the cell")
     }
 }
