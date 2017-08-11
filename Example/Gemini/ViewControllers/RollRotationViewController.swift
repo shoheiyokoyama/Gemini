@@ -54,7 +54,9 @@ final class RollRotationViewController: UIViewController {
 
         // Switch navigation bar hidden
         navigationController?.setNavigationBarHidden(true, animated: false)
-        view.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(toggleNavigationBarHidden(_:))))
+        let gesture = UITapGestureRecognizer(target: self, action: #selector(toggleNavigationBarHidden(_:)))
+        gesture.cancelsTouchesInView = false
+        view.addGestureRecognizer(gesture)
 
         // Setting of BackgroundColor
         let startColor = UIColor(red: 29 / 255, green: 44 / 255, blue: 76 / 255, alpha: 1)

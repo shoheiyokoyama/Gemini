@@ -64,7 +64,9 @@ final class CustomAnimationViewController: UIViewController {
 
         // Switch navigation bar hidden
         navigationController?.setNavigationBarHidden(true, animated: false)
-        view.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(toggleNavigationBarHidden(_:))))
+        let gesture = UITapGestureRecognizer(target: self, action: #selector(toggleNavigationBarHidden(_:)))
+        gesture.cancelsTouchesInView = false
+        view.addGestureRecognizer(gesture)
 
         // Setting of UICollectionViewFlowLayout
         if animationType == .custom1 {

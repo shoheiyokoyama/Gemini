@@ -51,7 +51,9 @@ final class CircleRotationViewController: UIViewController {
 
         // Switch navigation bar hidden
         navigationController?.setNavigationBarHidden(true, animated: false)
-        view.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(toggleNavigationBarHidden(_:))))
+        let gesture = UITapGestureRecognizer(target: self, action: #selector(toggleNavigationBarHidden(_:)))
+        gesture.cancelsTouchesInView = false
+        view.addGestureRecognizer(gesture)
     }
 
     func toggleNavigationBarHidden(_ gestureRecognizer: UITapGestureRecognizer) {
