@@ -233,7 +233,7 @@ final class GeminiAnimationModel {
             }
 
             let scale = self.calculatedScale(withRatio: easingRatio)
-            let scaleTransform = CATransform3DScale(transform3DIdentity, scale, scale, 0)
+            let scaleTransform = CATransform3DScale(transform3DIdentity, scale, scale, 1)
             return CATransform3DConcat(CATransform3DConcat(rotateTransform, translateTransform), scaleTransform)
 
         case .rollRotation:
@@ -251,9 +251,9 @@ final class GeminiAnimationModel {
             case .reverseSineWave:
                 degree = -abs(_degree)
             }
-            
+
             let scale = self.calculatedScale(withRatio: easingRatio)
-            let scaleTransform   = CATransform3DScale(transform3DIdentity, scale, scale, 0)
+            let scaleTransform   = CATransform3DScale(transform3DIdentity, scale, scale, 1)
             let rotateTransform  = CATransform3DRotate(transform3DIdentity, degree * .pi / 180, 0, 1, 0)
             return CATransform3DConcat(scaleTransform, rotateTransform)
 
@@ -274,7 +274,7 @@ final class GeminiAnimationModel {
             }
 
             let scale = self.calculatedScale(withRatio: easingRatio)
-            let scaleTransform   = CATransform3DScale(transform3DIdentity, scale, scale, 0)
+            let scaleTransform   = CATransform3DScale(transform3DIdentity, scale, scale, 1)
             let rotateTransform  = CATransform3DRotate(transform3DIdentity, degree * .pi / 180, 1, 0, 0)
             return CATransform3DConcat(scaleTransform, rotateTransform)
 
@@ -295,13 +295,13 @@ final class GeminiAnimationModel {
             }
 
             let scale = self.calculatedScale(withRatio: easingRatio)
-            let scaleTransform   = CATransform3DScale(transform3DIdentity, scale, scale, 0)
+            let scaleTransform   = CATransform3DScale(transform3DIdentity, scale, scale, 1)
             let rotateTransform  = CATransform3DRotate(transform3DIdentity, degree * .pi / 180, 0, 0, 1)
             return CATransform3DConcat(scaleTransform, rotateTransform)
 
         case .scale:
             let scale = self.calculatedScale(withRatio: easingRatio)
-            return CATransform3DScale(transform3DIdentity, scale, scale, 0)
+            return CATransform3DScale(transform3DIdentity, scale, scale, 1)
 
         case .custom:
             // Scale
