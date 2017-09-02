@@ -180,15 +180,17 @@ final class GeminiAnimationModel {
 
     func backgroundColor(withDistanceRatio ratio: CGFloat) -> UIColor? {
         // sc = Start backgroundColor components
-        let sc = startBackgroundColor?.cgColor.components ?? []
+        let startColorComponents = startBackgroundColor?.cgColor.components ?? []
         // ec = End backgroundColor components
-        let ec = endBackgroundColor?.cgColor.components ?? []
+        let endColorComponents = endBackgroundColor?.cgColor.components ?? []
 
-        if sc.isEmpty || sc.count < 3 || ec.isEmpty || ec.count < 3 {
+        if startColorComponents.isEmpty || startColorComponents.count < 3 || endColorComponents.isEmpty || endColorComponents.count < 3 {
             return nil
         }
 
-        let components = (0...3).map { (ec[$0] - sc[$0]) * abs(ratio) + sc[$0] }
+        let components = (0...3).map { index -> CGFloat in
+            (endColorComponents[index] - startColorComponents[index]) * abs(ratio) + startColorComponents[index]
+        }
         return UIColor(red: components[0], green: components[1], blue: components[2], alpha: components[3])
     }
 
