@@ -184,7 +184,7 @@ final class GeminiAnimationModel {
         // ec = End backgroundColor components
         let endColorComponents = endBackgroundColor?.cgColor.components ?? []
 
-        if startColorComponents.isEmpty || startColorComponents.count < 3 || endColorComponents.isEmpty || endColorComponents.count < 3 {
+        if startColorComponents.count < 3 || endColorComponents.count < 3 {
             return nil
         }
 
