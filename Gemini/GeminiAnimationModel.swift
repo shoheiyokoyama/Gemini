@@ -108,6 +108,7 @@ final class GeminiAnimationModel {
     /// CircleRotate animation property
     var circleRadius: CGFloat = 100
     var rotateDirection: CircleRotationDirection = .clockwise
+    var isItemRotationEnabled: Bool = true
 
     /// Scale animation properties
     var scale: CGFloat = 1
@@ -236,7 +237,8 @@ final class GeminiAnimationModel {
 
             let scale = self.calculatedScale(withRatio: easingRatio)
             let scaleTransform = CATransform3DScale(transform3DIdentity, scale, scale, 1)
-            return CATransform3DConcat(CATransform3DConcat(rotateTransform, translateTransform), scaleTransform)
+            let circleTransform = isItemRotationEnabled ? CATransform3DConcat(rotateTransform, translateTransform) : translateTransform
+            return CATransform3DConcat(circleTransform, scaleTransform)
 
         case .rollRotation:
             let toDegree: CGFloat = max(0, min(90, rollDegree))
