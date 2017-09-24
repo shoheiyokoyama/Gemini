@@ -37,7 +37,7 @@ final class CircleRotationViewController: UIViewController {
                 .circleRotationAnimation()
                 .radius(450)
                 .rotateDirection(rotateDirection)
-                .isItemRotationEnabled(true)
+                .itemRotationEnabled(true)
         }
     }
 

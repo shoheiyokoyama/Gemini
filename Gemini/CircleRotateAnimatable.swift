@@ -23,7 +23,7 @@ public protocol CircleRotationAnimatable: ScaleAnimatable, UIAppearanceAnimatabl
     @discardableResult func rotateDirection(_ direction: CircleRotationDirection) -> CircleRotationAnimatable
 
     /// A Boolean value indicating whether the item rotates or not.
-    @discardableResult func isItemRotationEnabled(_ isEnabled: Bool) -> CircleRotationAnimatable
+    @discardableResult func itemRotationEnabled(_ isEnabled: Bool) -> CircleRotationAnimatable
 }
 
 extension GeminiAnimationModel: CircleRotationAnimatable {
@@ -40,7 +40,7 @@ extension GeminiAnimationModel: CircleRotationAnimatable {
     }
 
     @discardableResult
-    public func isItemRotationEnabled(_ isEnabled: Bool) -> CircleRotationAnimatable {
+    public func itemRotationEnabled(_ isEnabled: Bool) -> CircleRotationAnimatable {
         isItemRotationEnabled = isEnabled
         return self
     }
