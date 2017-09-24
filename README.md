@@ -108,6 +108,7 @@ collectionView.gemini
     .circleRotationAnimation()
     .radius(450) // The radius of the circle
     .rotateDirection(.clockwise) // Direction of rotation. 
+    .itemRotationEnabled(true) // Whether the item rotates or not.
 ```
 
 ## <a name="3d-vector-rotation"> 3D vector rotation
