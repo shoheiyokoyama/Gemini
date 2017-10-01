@@ -10,4 +10,4 @@
 
 ##### Bug Fixes
 
-* iNone.  
+* None.  
