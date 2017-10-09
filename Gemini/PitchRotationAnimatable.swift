@@ -13,12 +13,13 @@ public enum PitchRotationEffect {
     case reverseSineWave
 }
 
-public protocol PitchRotationAnimatable: ScaleAnimatable, EasingAnimatable, UIAppearanceAnimatable {
+public protocol PitchRotationAnimatable: ScaleAnimatable, UIAppearanceAnimatable {
     /// The degree of rotation in the pitch direction. the default value is 90.
     /// - SeeAlso: [Pitch, roll, and yaw axes](https://github.com/shoheiyokoyama/Assets/blob/master/Gemini/attitude_rotation.png)
     @discardableResult func degree(_ degree: CGFloat) -> PitchRotationAnimatable
 
     /// The option of `GeminiAnimation.pitchRotation`. the default value is `PitchRotationEffect.pitchUp`.
+    /// `GeminiEasing` is applied to `PitchRotationEffect`.
     @discardableResult func pitchEffect(_ effect: PitchRotationEffect) -> PitchRotationAnimatable
 }
 

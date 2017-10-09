@@ -13,12 +13,13 @@ public enum RollRotationEffect {
     case reverseSineWave
 }
 
-public protocol RollRotationAnimatable: ScaleAnimatable, EasingAnimatable, UIAppearanceAnimatable {
+public protocol RollRotationAnimatable: ScaleAnimatable, UIAppearanceAnimatable {
     /// The degree of rotation in the roll direction. the default value is 90.
     /// - SeeAlso: [Pitch, roll, and yaw axes](https://github.com/shoheiyokoyama/Assets/blob/master/Gemini/attitude_rotation.png)
     @discardableResult func degree(_ degree: CGFloat) -> RollRotationAnimatable
 
     /// The option of `GeminiAnimation.rollRotation`. the default value is `RollRotationEffect.rollUp`.
+    /// `GeminiEasing` is applied to `RollRotationEffect`.
     @discardableResult func rollEffect(_ effect: RollRotationEffect) -> RollRotationAnimatable
 }
 

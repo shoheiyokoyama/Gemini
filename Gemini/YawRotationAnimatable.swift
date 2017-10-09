@@ -13,12 +13,13 @@ public enum YawRotationEffect {
     case reverseSineWave
 }
 
-public protocol YawRotationAnimatable: ScaleAnimatable, EasingAnimatable, UIAppearanceAnimatable {
+public protocol YawRotationAnimatable: ScaleAnimatable, UIAppearanceAnimatable {
     /// The degree of rotation in the yaw direction. the default value is 90.0.
     /// - SeeAlso: [Pitch, roll, and yaw axes](https://github.com/shoheiyokoyama/Assets/blob/master/Gemini/attitude_rotation.png)
     @discardableResult func degree(_ degree: CGFloat) -> YawRotationAnimatable
 
     /// The option of `GeminiAnimation.yawRotation`. the default value is `YawRotationEffect.yawUp`.
+    /// `GeminiEasing` is applied to `YawRotationEffect`.
     @discardableResult func yawEffect(_ effect: YawRotationEffect) -> YawRotationAnimatable
 }
 
