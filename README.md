@@ -41,7 +41,7 @@ collectionView.gemini
 - [x] Several types of animations and properties
 - [x] Support vertical and horizontal flow layout
 - [x] Support easing function
-- [x] Support `Swift3`
+- [x] Support `Swift4.0`
 - [x] Fluent interfaces based on method chaining
 - [x] Compatible with `Carthage`
 - [x] Compatible with `CocoaPod`
