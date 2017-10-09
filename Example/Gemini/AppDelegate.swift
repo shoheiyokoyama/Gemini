@@ -22,7 +22,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window?.makeKeyAndVisible()
 
         UINavigationBar.appearance().tintColor = .white
-        UINavigationBar.appearance().titleTextAttributes = [NSForegroundColorAttributeName : UIColor.white]
+        UINavigationBar.appearance().titleTextAttributes = [NSAttributedStringKey.foregroundColor : UIColor.white]
         UINavigationBar.appearance().setBackgroundImage(image(of: UIColor.black.withAlphaComponent(0.75)), for: .default)
         UINavigationBar.appearance().shadowImage = UIImage()
 

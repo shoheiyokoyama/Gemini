@@ -24,12 +24,12 @@ final class PlayerView: UIView {
 
     override init(frame: CGRect) {
         super.init(frame: frame)
-        playerLayer.videoGravity = AVLayerVideoGravityResizeAspectFill
+        playerLayer.videoGravity = AVLayerVideoGravity.resizeAspectFill
     }
 
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
-        playerLayer.videoGravity = AVLayerVideoGravityResizeAspectFill
+        playerLayer.videoGravity = AVLayerVideoGravity.resizeAspectFill
     }
 
     func setVideoURL(_ url: URL) {

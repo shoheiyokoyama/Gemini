@@ -316,7 +316,7 @@ To run the example project, clone the repo, and run `pod install` from the Examp
 ## <a name="requirements"> Requirements
 
 - Xcode 9.0+
-- Swift 3.2
+- Swift 4.0
 
 ## <a name="installation"> Installation
 

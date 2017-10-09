@@ -52,7 +52,7 @@ final class CubeViewController: UIViewController {
         view.addGestureRecognizer(gesture)
     }
 
-    func toggleNavigationBarHidden(_ gestureRecognizer: UITapGestureRecognizer) {
+    @objc func toggleNavigationBarHidden(_ gestureRecognizer: UITapGestureRecognizer) {
         let isNavigationBarHidden = navigationController?.isNavigationBarHidden ?? true
         navigationController?.setNavigationBarHidden(!isNavigationBarHidden, animated: true)
     }
