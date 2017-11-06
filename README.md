@@ -30,8 +30,8 @@ collectionView.gemini
 [![Carthage compatible](https://img.shields.io/badge/Carthage-Compatible-brightgreen.svg?style=flat)](https://github.com/Carthage/Carthage)
 [![License](http://img.shields.io/badge/license-MIT-lightgrey.svg?style=flat
 )](http://mit-license.org)
-![Swift](https://img.shields.io/badge/Swift-3.0-orange.svg)
-![pod](https://img.shields.io/badge/pod-v1.1.2-red.svg)
+![Swift](https://img.shields.io/badge/Swift-4.0-orange.svg)
+![pod](https://img.shields.io/badge/pod-v1.2.0-red.svg)
 
 <img src="https://github.com/shoheiyokoyama/Assets/blob/master/Gemini/demo-yaw-rotation.gif" align="right">
 
