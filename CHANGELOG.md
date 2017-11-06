@@ -7,7 +7,8 @@
 
 ##### Enhancements
 
-* None. 
+* Fixed settings
+  * [Set SWIFT_SWIFT3_OBJC_INFERENCE to Default](https://github.com/shoheiyokoyama/Gemini/commit/9ae0fc35840c627d8ec74b75dafd50c6aaef77d1)
 
 ##### Bug Fixes
 
