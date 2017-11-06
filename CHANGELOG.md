@@ -1,5 +1,20 @@
 ## Master
 
+
+##### Breaking
+
+* None.  
+
+##### Enhancements
+
+* None. 
+
+##### Bug Fixes
+
+* None. 
+
+## [1.2.0](https://github.com/shoheiyokoyama/Gemini/releases/tag/1.2.0)
+
 ##### Breaking
 
 * None.  
