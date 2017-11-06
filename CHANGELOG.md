@@ -15,4 +15,5 @@
 
 ##### Bug Fixes
 
-* None.  
+* Fixed compiler error for Swift 4
+  * [Refactoring backgroundColor(withDistanceRatio:)](https://github.com/shoheiyokoyama/Gemini/commit/a293931b94e09ad5450be005309c78e8bc009567)
