@@ -33,6 +33,11 @@ final class CircleRotationViewController: UIViewController {
             collectionView.delegate   = self
             collectionView.dataSource = self
             collectionView.backgroundColor = UIColor(red: 234 / 255, green: 242 / 255, blue: 248 / 255, alpha: 1)
+
+            if #available(iOS 11.0, *) {
+                collectionView.contentInsetAdjustmentBehavior = .never
+            }
+
             collectionView.gemini
                 .circleRotationAnimation()
                 .radius(450)

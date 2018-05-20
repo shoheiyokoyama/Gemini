@@ -18,6 +18,11 @@ final class CubeViewController: UIViewController {
             collectionView.delegate   = self
             collectionView.dataSource = self
             collectionView.isPagingEnabled = true
+
+            if #available(iOS 11.0, *) {
+                collectionView.contentInsetAdjustmentBehavior = .never
+            }
+
             collectionView.gemini
                 .cubeAnimation()
                 .shadowEffect(.fadeIn)

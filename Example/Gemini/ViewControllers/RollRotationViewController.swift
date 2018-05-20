@@ -18,6 +18,11 @@ final class RollRotationViewController: UIViewController {
             collectionView.backgroundColor = .clear
             collectionView.delegate   = self
             collectionView.dataSource = self
+
+            if #available(iOS 11.0, *) {
+                collectionView.contentInsetAdjustmentBehavior = .never
+            }
+
             collectionView.gemini
                 .rollRotationAnimation()
                 .rollEffect(rotationEffect)
