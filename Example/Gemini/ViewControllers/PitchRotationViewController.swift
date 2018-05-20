@@ -18,6 +18,11 @@ final class PitchRotationViewController: UIViewController {
             collectionView.delegate   = self
             collectionView.dataSource = self
             collectionView.backgroundColor = .clear
+
+            if #available(iOS 11.0, *) {
+                collectionView.contentInsetAdjustmentBehavior = .never
+            }
+
             collectionView.gemini
                 .pitchRotationAnimation()
                 .scale(0.7)

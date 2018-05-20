@@ -43,6 +43,10 @@ final class CustomAnimationViewController: UIViewController {
             collectionView.register(nib, forCellWithReuseIdentifier: cellIdentifier)
             collectionView.delegate   = self
             collectionView.dataSource = self
+
+            if #available(iOS 11.0, *) {
+                collectionView.contentInsetAdjustmentBehavior = .never
+            }
         }
     }
 
