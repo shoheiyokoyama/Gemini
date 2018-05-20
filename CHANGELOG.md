@@ -12,7 +12,7 @@
 
 ##### Bug Fixes
 
-* None. 
+* Supports layout for iPhoneX in Example project #15
 
 ## [1.2.0](https://github.com/shoheiyokoyama/Gemini/releases/tag/1.2.0)
 
