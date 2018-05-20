@@ -104,12 +104,35 @@ extension CircleRotationViewController: UICollectionViewDataSource {
 
 // MARK: - UICollectionViewDelegateFlowLayout
 extension CircleRotationViewController: UICollectionViewDelegateFlowLayout {
+    private enum Const {
+        static let collcetionViewSize = CGSize(width: 200, height: 350)
+    }
+
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: 200, height: 350)
+        return Const.collcetionViewSize
     }
 
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
-        return UIEdgeInsets(top: 50, left: 50, bottom: 50, right: 50)
+        guard let layout = collectionView.collectionViewLayout as? UICollectionViewFlowLayout else {
+            return UIEdgeInsets(top: 50, left: 50, bottom: 50, right: 50)
+        }
+
+        switch layout.scrollDirection {
+        case .horizontal:
+
+            let verticalMargin: CGFloat = (collectionView.bounds.height - Const.collcetionViewSize.height) / 2
+            return UIEdgeInsets(top: 50 + verticalMargin,
+                                left: 50,
+                                bottom: 50 + verticalMargin,
+                                right: 50)
+        case .vertical:
+
+            let horizontalMargin: CGFloat = (collectionView.bounds.width - Const.collcetionViewSize.width) / 2
+            return UIEdgeInsets(top: 50,
+                                left: 50 + horizontalMargin,
+                                bottom: 50,
+                                right: 50 + horizontalMargin)
+        }
     }
 
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
