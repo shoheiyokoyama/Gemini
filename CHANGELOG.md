@@ -1,5 +1,18 @@
 ## Master
 
+##### Breaking
+
+* None. 
+
+##### Enhancements
+
+* None. 
+
+##### Bug Fixes
+
+* None. 
+
+## 1.3.0
 
 ##### Breaking
 
