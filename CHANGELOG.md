@@ -10,7 +10,7 @@
 * Fixed settings
   * [Set SWIFT_SWIFT3_OBJC_INFERENCE to Default](https://github.com/shoheiyokoyama/Gemini/commit/9ae0fc35840c627d8ec74b75dafd50c6aaef77d1)
 * Update project setting #16
-* Support Swift4.1
+* Support Swift4.1 #17
 
 ##### Bug Fixes
 
