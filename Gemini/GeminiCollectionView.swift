@@ -47,7 +47,7 @@ public final class GeminiCollectionView: UICollectionView {
         guard let model = animationModel, model.isEnabled else { return }
 
         visibleCells
-            .flatMap { $0 as? GeminiCell }
+            .compactMap { $0 as? GeminiCell }
             .forEach { [weak self] cell in
                 self?.animateCell(cell)
             }
