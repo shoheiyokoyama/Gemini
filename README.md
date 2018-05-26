@@ -30,7 +30,7 @@ collectionView.gemini
 [![Carthage compatible](https://img.shields.io/badge/Carthage-Compatible-brightgreen.svg?style=flat)](https://github.com/Carthage/Carthage)
 [![License](http://img.shields.io/badge/license-MIT-lightgrey.svg?style=flat
 )](http://mit-license.org)
-![Swift](https://img.shields.io/badge/Swift-4.0-orange.svg)
+![Swift](https://img.shields.io/badge/Swift-4.1-orange.svg)
 ![pod](https://img.shields.io/badge/pod-v1.2.0-red.svg)
 
 <img src="https://github.com/shoheiyokoyama/Assets/blob/master/Gemini/demo-yaw-rotation.gif" align="right">
@@ -41,7 +41,7 @@ collectionView.gemini
 - [x] Several types of animations and properties
 - [x] Support vertical and horizontal flow layout
 - [x] Support easing function
-- [x] Support `Swift4.0`
+- [x] Support `Swift4.1`
 - [x] Fluent interfaces based on method chaining
 - [x] Compatible with `Carthage`
 - [x] Compatible with `CocoaPod`
@@ -316,7 +316,7 @@ To run the example project, clone the repo, and run `pod install` from the Examp
 ## <a name="requirements"> Requirements
 
 - Xcode 9.3.1
-- Swift 4.0
+- Swift 4.1
 
 ## <a name="installation"> Installation
 
