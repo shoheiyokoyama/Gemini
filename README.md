@@ -39,14 +39,13 @@ collectionView.gemini
 - [x] Easily usable
 - [x] Highly customizable
 - [x] Several types of animations and properties
-- [x] Support vertical and horizontal flow layout
-- [x] Support easing function
-- [x] Support `Swift4.1`
+- [x] Supports vertical and horizontal flow layout
+- [x] Supports easing function
+- [x] Supports `Swift4.1`
 - [x] Fluent interfaces based on method chaining
 - [x] Compatible with `Carthage`
-- [x] Compatible with `CocoaPod`
-- [x] Completely Example Project
-- [x] Completely `README`
+- [x] Compatible with `CocoaPods`
+- [x] Example project with lots of stock animations
 - [x] And More...
 
 # Contents
@@ -58,7 +57,7 @@ collectionView.gemini
 
 # <a name="anmation-types"> Animation Types and properties
 
-Following animation types are available. You can find out sample code [here](https://github.com/shoheiyokoyama/Gemini/tree/master/Example/Gemini).
+The following animation types are available. See sample code [here](https://github.com/shoheiyokoyama/Gemini/tree/master/Example/Gemini) for details.
 
 - [Cube](#cube)
 - [Circle Rotation](#circle-rotation) You can configure direction of rotation using the `CircleRotationDirection`
