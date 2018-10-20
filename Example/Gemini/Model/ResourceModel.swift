@@ -15,11 +15,11 @@ enum Resource {
 
 extension Resource {
     var images: [UIImage] {
-        return resourceNames.flatMap { UIImage(named: $0) }
+        return resourceNames.compactMap { UIImage(named: $0) }
     }
 
     var urls: [URL] {
-        return resourceNames.flatMap { URL(string: $0) }
+        return resourceNames.compactMap(URL.init)
     }
 
     private var resourceNames: [String] {

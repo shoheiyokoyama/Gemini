@@ -84,7 +84,7 @@ extension AnimationListViewController: UITableViewDelegate {
         switch (indexPath.section, indexPath.row) {
         // Cube Animation
         case (0, _):
-            let direction: UICollectionViewScrollDirection = indexPath.row == 0 ? .horizontal : .vertical
+            let direction: UICollectionView.ScrollDirection = indexPath.row == 0 ? .horizontal : .vertical
             let viewController = CubeViewController.make(scrollDirection: direction)
             navigationController?.pushViewController(viewController, animated: true)
 

@@ -32,11 +32,11 @@ final class PitchRotationViewController: UIViewController {
 
     fileprivate let cellIdentifier = "ImageCollectionViewCell"
     private(set) var rotationEffect: PitchRotationEffect = .pitchUp
-    private(set) var scrollDirection: UICollectionViewScrollDirection = .horizontal
+    private(set) var scrollDirection: UICollectionView.ScrollDirection = .horizontal
 
     fileprivate let images: [UIImage] = Resource.image.images
 
-    static func make(scrollDirection: UICollectionViewScrollDirection, effect: PitchRotationEffect) -> PitchRotationViewController {
+    static func make(scrollDirection: UICollectionView.ScrollDirection, effect: PitchRotationEffect) -> PitchRotationViewController {
         let storyboard = UIStoryboard(name: "PitchRotationViewController", bundle: nil)
         let viewController = storyboard.instantiateViewController(withIdentifier: "PitchRotationViewController") as! PitchRotationViewController
         viewController.rotationEffect  = effect
@@ -61,7 +61,7 @@ final class PitchRotationViewController: UIViewController {
         layout.minimumLineSpacing = 30
         layout.minimumInteritemSpacing = 30
         collectionView.collectionViewLayout = layout
-        collectionView.decelerationRate = UIScrollViewDecelerationRateFast
+        collectionView.decelerationRate = UIScrollView.DecelerationRate.fast
 
         // Setting of BackgroundColor
         let startColor = UIColor(red: 238 / 255, green: 156 / 255, blue: 167 / 255, alpha: 1)

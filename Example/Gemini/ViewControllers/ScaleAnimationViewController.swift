@@ -31,12 +31,12 @@ final class ScaleAnimationViewController: UIViewController {
     }
 
     fileprivate let cellIdentifier = "ImageCollectionViewCell"
-    private(set) var scrollDirection: UICollectionViewScrollDirection = .horizontal
+    private(set) var scrollDirection: UICollectionView.ScrollDirection = .horizontal
     private(set) var scaleEffect: GeminScaleEffect = .scaleUp
 
     fileprivate let images: [UIImage] = Resource.image.images
 
-    static func make(scrollDirection: UICollectionViewScrollDirection, scaleEffect: GeminScaleEffect) -> ScaleAnimationViewController {
+    static func make(scrollDirection: UICollectionView.ScrollDirection, scaleEffect: GeminScaleEffect) -> ScaleAnimationViewController {
         let storyboard = UIStoryboard(name: "ScaleAnimationViewController", bundle: nil)
         let viewController = storyboard.instantiateViewController(withIdentifier: "ScaleAnimationViewController") as! ScaleAnimationViewController
         viewController.scrollDirection = scrollDirection
@@ -61,7 +61,7 @@ final class ScaleAnimationViewController: UIViewController {
         layout.minimumLineSpacing = 40
         layout.minimumInteritemSpacing = 40
         collectionView.collectionViewLayout = layout
-        collectionView.decelerationRate = UIScrollViewDecelerationRateFast
+        collectionView.decelerationRate = UIScrollView.DecelerationRate.fast
     }
 
     @objc func toggleNavigationBarHidden(_ gestureRecognizer: UITapGestureRecognizer) {

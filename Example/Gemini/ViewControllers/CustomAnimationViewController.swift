@@ -75,7 +75,7 @@ final class CustomAnimationViewController: UIViewController {
         // Setting of UICollectionViewFlowLayout
         if animationType == .custom1 {
             collectionView.collectionViewLayout = animationType.layout(withParentView: view)
-            collectionView.decelerationRate = UIScrollViewDecelerationRateFast
+            collectionView.decelerationRate = UIScrollView.DecelerationRate.fast
         } else {
             collectionView.collectionViewLayout = animationType.layout(withParentView: view)
         }

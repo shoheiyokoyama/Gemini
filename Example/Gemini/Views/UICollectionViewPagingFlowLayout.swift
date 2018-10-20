@@ -18,7 +18,7 @@ final class UICollectionViewPagingFlowLayout: UICollectionViewFlowLayout {
         let flickVelocityThreshold: CGFloat = 0.2
         let currentPage = offset / pageSize
 
-        if fabs(velocity) > flickVelocityThreshold {
+        if abs(velocity) > flickVelocityThreshold {
             let nextPage = velocity > 0.0 ? ceil(currentPage) : floor(currentPage)
             let nextPosition = nextPage * pageSize
             return isVertical ? CGPoint(x: proposedContentOffset.x, y: nextPosition) : CGPoint(x: nextPosition, y: proposedContentOffset.y)

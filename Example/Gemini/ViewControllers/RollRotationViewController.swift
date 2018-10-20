@@ -32,11 +32,11 @@ final class RollRotationViewController: UIViewController {
 
     fileprivate let cellIdentifier = "ImageCollectionViewCell"
     private(set) var rotationEffect: RollRotationEffect = .rollUp
-    private(set) var scrollDirection: UICollectionViewScrollDirection = .horizontal
+    private(set) var scrollDirection: UICollectionView.ScrollDirection = .horizontal
     
     fileprivate let images: [UIImage] = Resource.image.images
 
-    static func make(scrollDirection: UICollectionViewScrollDirection, effect: RollRotationEffect) -> RollRotationViewController {
+    static func make(scrollDirection: UICollectionView.ScrollDirection, effect: RollRotationEffect) -> RollRotationViewController {
         let storyboard = UIStoryboard(name: "RollRotationViewController", bundle: nil)
         let viewController = storyboard.instantiateViewController(withIdentifier: "RollRotationViewController") as! RollRotationViewController
         viewController.rotationEffect = effect
@@ -55,7 +55,7 @@ final class RollRotationViewController: UIViewController {
         layout.minimumLineSpacing = 30
         layout.minimumInteritemSpacing = 30
         collectionView.collectionViewLayout = layout
-        collectionView.decelerationRate = UIScrollViewDecelerationRateFast
+        collectionView.decelerationRate = UIScrollView.DecelerationRate.fast
 
         // Switch navigation bar hidden
         navigationController?.setNavigationBarHidden(true, animated: false)

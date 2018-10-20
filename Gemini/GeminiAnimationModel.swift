@@ -23,7 +23,7 @@ enum GeminiScrollDirection {
     case vertical
     case horizontal
 
-    init(direction: UICollectionViewScrollDirection) {
+    init(direction: UICollectionView.ScrollDirection) {
         switch direction {
         case .horizontal:
             self = .horizontal

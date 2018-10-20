@@ -32,11 +32,11 @@ final class YawRotationViewController: UIViewController {
 
     fileprivate let cellIdentifier = "ImageCollectionViewCell"
     private(set) var rotationEffect: YawRotationEffect = .yawUp
-    private(set) var scrollDirection: UICollectionViewScrollDirection = .horizontal
+    private(set) var scrollDirection: UICollectionView.ScrollDirection = .horizontal
 
     fileprivate let images: [UIImage] = Resource.image.images
 
-    static func make(scrollDirection: UICollectionViewScrollDirection, effect: YawRotationEffect) -> YawRotationViewController {
+    static func make(scrollDirection: UICollectionView.ScrollDirection, effect: YawRotationEffect) -> YawRotationViewController {
         let storyboard = UIStoryboard(name: "YawRotationViewController", bundle: nil)
         let viewController = storyboard.instantiateViewController(withIdentifier: "YawRotationViewController") as! YawRotationViewController
         viewController.rotationEffect  = effect
@@ -62,7 +62,7 @@ final class YawRotationViewController: UIViewController {
         layout.minimumLineSpacing = 80
         layout.minimumInteritemSpacing = 80
         collectionView.collectionViewLayout = layout
-        collectionView.decelerationRate = UIScrollViewDecelerationRateFast
+        collectionView.decelerationRate = UIScrollView.DecelerationRate.fast
     }
 
     @objc func toggleNavigationBarHidden(_ gestureRecognizer: UITapGestureRecognizer) {

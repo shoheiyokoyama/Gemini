@@ -30,11 +30,11 @@ final class CubeViewController: UIViewController {
     }
     fileprivate let cellIdentifier = "PlayerCollectionViewCell"
 
-    var direction: UICollectionViewScrollDirection = .horizontal
+    var direction: UICollectionView.ScrollDirection = .horizontal
 
     fileprivate var movieURLs: [URL] = Resource.movie.urls
 
-    static func make(scrollDirection: UICollectionViewScrollDirection) -> CubeViewController {
+    static func make(scrollDirection: UICollectionView.ScrollDirection) -> CubeViewController {
         let storyboard = UIStoryboard(name: "CubeViewController", bundle: nil)
         let viewController = storyboard.instantiateViewController(withIdentifier: "CubeViewController") as! CubeViewController
         viewController.direction = scrollDirection
@@ -70,10 +70,8 @@ extension CubeViewController {
 
         // Pause movie during scrolling
         collectionView.visibleCells
-            .flatMap { $0 as? PlayerCollectionViewCell }
-            .forEach { cell in
-                cell.playerView.pause()
-            }
+            .compactMap { $0 as? PlayerCollectionViewCell }
+            .forEach { $0.playerView.pause() }
     }
 
     func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
