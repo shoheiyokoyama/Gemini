@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = 'Gemini'
-  s.version          = '1.3.0'
+  s.version          = '1.3.1'
   s.summary          = 'Gemini is rich scroll animation framework for iOS, written in Swift.'
   s.description       = <<-DESC
 Gemini is rich scroll animation framework for iOS, written in Swift. 
