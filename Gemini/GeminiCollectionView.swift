@@ -21,7 +21,6 @@ public final class GeminiCollectionView: UICollectionView {
         }
     }
 
-    // Initialization
     required public init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         updateScrollDirection(with: collectionViewLayout)
@@ -42,18 +41,16 @@ public final class GeminiCollectionView: UICollectionView {
         updateScrollDirection(with: layout)
     }
 
-    // Call this method in `scrollViewDidScroll(_:)`.
+    /// Call this method in `scrollViewDidScroll(_:)`.
     public func animateVisibleCells() {
         guard let model = animationModel, model.isEnabled else { return }
 
         visibleCells
             .compactMap { $0 as? GeminiCell }
-            .forEach { [weak self] cell in
-                self?.animateCell(cell)
-            }
+            .forEach(animateCell)
     }
 
-    // Call this method `collectionView(_:cellForItemAt:)` and `collectionView(_:willDisplay:forItemAt:)`.
+    /// Call this method `collectionView(_:cellForItemAt:)` and `collectionView(_:willDisplay:forItemAt:)`.
     public func animateCell(_ cell: GeminiCell) {
         guard let model = animationModel, model.isEnabled else { return }
 
@@ -87,8 +84,6 @@ public final class GeminiCollectionView: UICollectionView {
     }
 
     private func updateScrollDirection(with layout: UICollectionViewLayout) {
-        if let model = animationModel, let flowLayout = layout as? UICollectionViewFlowLayout  {
-            model.scrollDirection = GeminiScrollDirection(direction: flowLayout.scrollDirection)
-        }
+        (layout as? UICollectionViewFlowLayout).map { animationModel?.scrollDirection = $0.scrollDirection }
     }
 }

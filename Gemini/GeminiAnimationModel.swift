@@ -19,25 +19,12 @@ enum GeminiAnimation {
     case none
 }
 
-enum GeminiScrollDirection {
-    case vertical
-    case horizontal
-
-    init(direction: UICollectionView.ScrollDirection) {
-        switch direction {
-        case .horizontal:
-            self = .horizontal
-        case .vertical:
-            self = .vertical
-        }
-    }
-}
-
 public protocol Gemini {
     /// `isEnabled` is false if `animation` is GeminiAnimation.none
     var isEnabled: Bool { get }
 
-    /// GeminiAnimation
+    // GeminiAnimation
+
     @discardableResult func cubeAnimation() -> CubeAnimatable
     @discardableResult func customAnimation() -> CustomAnimatable
     @discardableResult func circleRotationAnimation() -> CircleRotationAnimatable
@@ -96,43 +83,53 @@ extension GeminiAnimationModel: Gemini {
 }
 
 final class GeminiAnimationModel {
-    /// Animation types
+    // Animation types
+
     var animation: GeminiAnimation = .none
 
-    /// EasingAnimatable
+    // EasingAnimatable
+
     var easing: GeminiEasing = .linear
 
-    /// Cube animation property
+    // Cube animation properties
+
     var cubeDegree: CGFloat = 90
 
-    /// CircleRotate animation property
+    // CircleRotate animation properties
+
     var circleRadius: CGFloat = 100
     var rotateDirection: CircleRotationDirection = .clockwise
     var isItemRotationEnabled: Bool = true
 
-    /// Scale animation properties
+    // Scale animation properties
+
     var scale: CGFloat = 1
     var scaleEffect: GeminScaleEffect = .scaleUp
 
-    /// Roll rotation animation properties
+    // Roll rotation animation properties
+
     var rollDegree: CGFloat = 90
     var rollEffect: RollRotationEffect = .rollUp
 
-    /// Pitch rotation animation properties
+    // Pitch rotation animation properties
+
     var pitchDegree: CGFloat = 90
     var pitchEffect: PitchRotationEffect = .pitchUp
 
-    /// Yaw rotation animation properties
+    // Yaw rotation animation properties
+
     var yawDegree: CGFloat = 90
     var yawEffect: YawRotationEffect = .yawUp
 
-    /// Custom animation properties
-    lazy var scaleStore: ScaleStore = .init()
-    lazy var rotationStore: RotationStore = .init()
-    lazy var translationStore: TranslationStore = .init()
+    // CustomAnimatable properties
+
+    lazy var scaleCoordinate = Coordinate()
+    lazy var rotationCoordinate = Coordinate()
+    lazy var translationCoordinate = Coordinate()
     var anchorPoint = CGPoint(x: 0.5, y: 0.5)
 
-    /// UIAppearanceAnimatable properties
+    // UIAppearanceAnimatable properties
+
     var alpha: CGFloat?
     var cornerRadius: CGFloat?
     var startBackgroundColor: UIColor?
@@ -141,7 +138,7 @@ final class GeminiAnimationModel {
     var minShadowAlpha: CGFloat = 0
     var shadowEffect: ShadowEffect = .none
 
-    var scrollDirection: GeminiScrollDirection = .vertical
+    var scrollDirection: UICollectionView.ScrollDirection = .vertical
 
     fileprivate lazy var transform3DIdentity: CATransform3D = {
         var identity = CATransform3DIdentity
@@ -149,7 +146,7 @@ final class GeminiAnimationModel {
         return identity
     }()
 
-    // For radian calculation in `GeminiAnimation.circleRotation`.
+    /// For radian calculation in `GeminiAnimation.circleRotation`.
     var needsCheckDistance: Bool {
         return animation == .circleRotation
     }
@@ -180,9 +177,7 @@ final class GeminiAnimationModel {
     }
 
     func backgroundColor(withDistanceRatio ratio: CGFloat) -> UIColor? {
-        // sc = Start backgroundColor components
         let startColorComponents = startBackgroundColor?.cgColor.components ?? []
-        // ec = End backgroundColor components
         let endColorComponents = endBackgroundColor?.cgColor.components ?? []
 
         if startColorComponents.count < 3 || endColorComponents.count < 3 {
@@ -308,40 +303,37 @@ final class GeminiAnimationModel {
             return CATransform3DScale(transform3DIdentity, scale, scale, 1)
 
         case .custom:
-            // Scale
-            let scaleX = calculatedScale(ofScale: scaleStore.x, withRatio: easingRatio)
-            let scaleY = calculatedScale(ofScale: scaleStore.y, withRatio: easingRatio)
-            let scaleZ = calculatedScale(ofScale: scaleStore.z, withRatio: easingRatio)
+            let scaleX = calculatedScale(ofScale: scaleCoordinate.x, withRatio: easingRatio)
+            let scaleY = calculatedScale(ofScale: scaleCoordinate.y, withRatio: easingRatio)
+            let scaleZ = calculatedScale(ofScale: scaleCoordinate.z, withRatio: easingRatio)
             let scaleTransform = CATransform3DScale(transform3DIdentity,
-                                                    scaleStore.x == 1 ? 1 : scaleX,
-                                                    scaleStore.y == 1 ? 1 : scaleY,
-                                                    scaleStore.z == 1 ? 1 : scaleZ)
+                                                    scaleCoordinate.x == 1 ? 1 : scaleX,
+                                                    scaleCoordinate.y == 1 ? 1 : scaleY,
+                                                    scaleCoordinate.z == 1 ? 1 : scaleZ)
 
-            // Rotation
-            let _vectorXDegree: CGFloat = max(0, min(90, rotationStore.x))
+            let _vectorXDegree: CGFloat = max(0, min(90, rotationCoordinate.x))
             let vectorXDegree: CGFloat  = _vectorXDegree * easingRatio
             let rotationX = CATransform3DRotate(transform3DIdentity,
                                                 vectorXDegree * .pi / 180,
-                                                rotationStore.x == 0 ? 0 : 1, 0, 0)
+                                                rotationCoordinate.x == 0 ? 0 : 1, 0, 0)
 
-            let _vectorYDegree: CGFloat = max(0, min(90, rotationStore.y))
+            let _vectorYDegree: CGFloat = max(0, min(90, rotationCoordinate.y))
             let vectorYDegree: CGFloat = _vectorYDegree * easingRatio
             let rotationY = CATransform3DRotate(transform3DIdentity,
                                                 vectorYDegree * .pi / 180,
-                                                0, rotationStore.y == 0 ? 0 : 1, 0)
+                                                0, rotationCoordinate.y == 0 ? 0 : 1, 0)
 
-            let _vectorZDegree: CGFloat = max(0, min(90, rotationStore.z))
+            let _vectorZDegree: CGFloat = max(0, min(90, rotationCoordinate.z))
             let vectorZDegree: CGFloat = _vectorZDegree * easingRatio
             let rotationZ = CATransform3DRotate(transform3DIdentity,
                                                 vectorZDegree * .pi / 180,
-                                                0, 0, rotationStore.z == 0 ? 0 : 1)
+                                                0, 0, rotationCoordinate.z == 0 ? 0 : 1)
 
             let concatedRotateTransform = CATransform3DConcat(rotationX, CATransform3DConcat(rotationY, rotationZ))
 
-            // Translate
-            let translateX = easingRatio > 0 ? translationStore.x : -translationStore.x
-            let translateY = easingRatio > 0 ? translationStore.y : -translationStore.y
-            let translateZ = easingRatio > 0 ? translationStore.z : -translationStore.z
+            let translateX = easingRatio > 0 ? translationCoordinate.x : -translationCoordinate.x
+            let translateY = easingRatio > 0 ? translationCoordinate.y : -translationCoordinate.y
+            let translateZ = easingRatio > 0 ? translationCoordinate.z : -translationCoordinate.z
             let translateTransform = CATransform3DTranslate(transform3DIdentity,
                                                             translateX * easingRatio,
                                                             translateY * easingRatio,
@@ -408,7 +400,7 @@ final class GeminiAnimationModel {
     }
 
     private func calculatedScale(withRatio ratio: CGFloat) -> CGFloat {
-        return calculatedScale(ofScale: self.scale, withRatio: ratio)
+        return calculatedScale(ofScale: scale, withRatio: ratio)
     }
 
     private func calculatedScale(ofScale scale: CGFloat, withRatio ratio: CGFloat) -> CGFloat {
