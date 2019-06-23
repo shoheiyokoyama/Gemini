@@ -2,8 +2,7 @@ import UIKit
 import Gemini
 
 final class ScaleAnimationViewController: UIViewController {
-
-    @IBOutlet weak var collectionView: GeminiCollectionView! {
+    @IBOutlet private weak var collectionView: GeminiCollectionView! {
         didSet {
             let nib = UINib(nibName: cellIdentifier, bundle: nil)
             collectionView.register(nib, forCellWithReuseIdentifier: cellIdentifier)
@@ -22,11 +21,10 @@ final class ScaleAnimationViewController: UIViewController {
         }
     }
 
-    fileprivate let cellIdentifier = "ImageCollectionViewCell"
-    private(set) var scrollDirection: UICollectionView.ScrollDirection = .horizontal
-    private(set) var scaleEffect: GeminScaleEffect = .scaleUp
-
-    fileprivate let images: [UIImage] = Resource.image.images
+    private let cellIdentifier = String(describing: ImageCollectionViewCell.self)
+    private var scrollDirection = UICollectionView.ScrollDirection.horizontal
+    private var scaleEffect = GeminScaleEffect.scaleUp
+    private let images = Resource.image.images
 
     static func make(scrollDirection: UICollectionView.ScrollDirection, scaleEffect: GeminScaleEffect) -> ScaleAnimationViewController {
         let storyboard = UIStoryboard(name: "ScaleAnimationViewController", bundle: nil)
@@ -39,13 +37,11 @@ final class ScaleAnimationViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Switch navigation bar hidden
         navigationController?.setNavigationBarHidden(true, animated: false)
         let gesture = UITapGestureRecognizer(target: self, action: #selector(toggleNavigationBarHidden(_:)))
         gesture.cancelsTouchesInView = false
         view.addGestureRecognizer(gesture)
 
-        // Setting of UICollectionViewFlowLayout
         let layout = UICollectionViewPagingFlowLayout()
         layout.scrollDirection = scrollDirection
         layout.itemSize = CGSize(width: view.bounds.width - 80, height: view.bounds.height - 400)
@@ -56,13 +52,14 @@ final class ScaleAnimationViewController: UIViewController {
         collectionView.decelerationRate = UIScrollView.DecelerationRate.fast
     }
 
-    @objc func toggleNavigationBarHidden(_ gestureRecognizer: UITapGestureRecognizer) {
+    @objc private func toggleNavigationBarHidden(_ gestureRecognizer: UITapGestureRecognizer) {
         let isNavigationBarHidden = navigationController?.isNavigationBarHidden ?? true
         navigationController?.setNavigationBarHidden(!isNavigationBarHidden, animated: true)
     }
 }
 
 // MARK: - UIScrollViewDelegate
+
 extension ScaleAnimationViewController {
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         collectionView.animateVisibleCells()
@@ -70,6 +67,7 @@ extension ScaleAnimationViewController {
 }
 
 // MARK: - UICollectionViewDelegate
+
 extension ScaleAnimationViewController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
         if let cell = cell as? GeminiCell {
@@ -79,6 +77,7 @@ extension ScaleAnimationViewController: UICollectionViewDelegate {
 }
 
 // MARK: - UICollectionViewDataSource
+
 extension ScaleAnimationViewController: UICollectionViewDataSource {
     func numberOfSections(in collectionView: UICollectionView) -> Int {
         return 1

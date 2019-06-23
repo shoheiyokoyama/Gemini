@@ -2,11 +2,11 @@ import UIKit
 import AVFoundation
 
 final class PlayerView: UIView {
-    var playerLayer: AVPlayerLayer {
+    private var playerLayer: AVPlayerLayer {
         return layer as! AVPlayerLayer
     }
 
-    var player: AVPlayer? {
+    private var player: AVPlayer? {
         return playerLayer.player
     }
 

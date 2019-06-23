@@ -5,7 +5,7 @@ enum CustomAnimationType {
     case custom1
     case custom2
 
-    func layout(withParentView parentView: UIView) -> UICollectionViewFlowLayout {
+    fileprivate func layout(withParentView parentView: UIView) -> UICollectionViewFlowLayout {
         switch self {
         case .custom1:
             let layout = UICollectionViewPagingFlowLayout()
@@ -14,6 +14,7 @@ enum CustomAnimationType {
             layout.minimumLineSpacing = 10
             layout.scrollDirection = .horizontal
             return layout
+
         case .custom2:
             let layout = UICollectionViewFlowLayout()
             layout.itemSize = CGSize(width: 150, height: 150)
@@ -29,7 +30,7 @@ enum CustomAnimationType {
 }
 
 final class CustomAnimationViewController: UIViewController {
-    @IBOutlet weak var collectionView: GeminiCollectionView! {
+    @IBOutlet private weak var collectionView: GeminiCollectionView! {
         didSet {
             let nib = UINib(nibName: cellIdentifier, bundle: nil)
             collectionView.register(nib, forCellWithReuseIdentifier: cellIdentifier)
@@ -42,11 +43,9 @@ final class CustomAnimationViewController: UIViewController {
         }
     }
 
-    fileprivate let cellIdentifier = "ImageCollectionViewCell"
-
-    fileprivate let images: [UIImage] = Resource.image.images
-
-    fileprivate var animationType: CustomAnimationType = .custom2
+    private let cellIdentifier = String(describing: ImageCollectionViewCell.self)
+    private let images = Resource.image.images
+    private var animationType = CustomAnimationType.custom2
 
     static func make(animationType: CustomAnimationType) -> CustomAnimationViewController {
         let storyboard = UIStoryboard(name: "CustomAnimationViewController", bundle: nil)
@@ -58,22 +57,15 @@ final class CustomAnimationViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Switch navigation bar hidden
         navigationController?.setNavigationBarHidden(true, animated: false)
         let gesture = UITapGestureRecognizer(target: self, action: #selector(toggleNavigationBarHidden(_:)))
         gesture.cancelsTouchesInView = false
         view.addGestureRecognizer(gesture)
 
-        // Setting of UICollectionViewFlowLayout
-        if animationType == .custom1 {
+        switch animationType {
+        case .custom1:
             collectionView.collectionViewLayout = animationType.layout(withParentView: view)
             collectionView.decelerationRate = UIScrollView.DecelerationRate.fast
-        } else {
-            collectionView.collectionViewLayout = animationType.layout(withParentView: view)
-        }
-
-        // Setting of GeminiAnimation
-        if animationType == .custom1 {
             collectionView.gemini
                 .customAnimation()
                 .translation(y: 50)
@@ -81,7 +73,9 @@ final class CustomAnimationViewController: UIViewController {
                 .ease(.easeOutExpo)
                 .shadowEffect(.fadeIn)
                 .maxShadowAlpha(0.3)
-        } else {
+
+        case .custom2:
+            collectionView.collectionViewLayout = animationType.layout(withParentView: view)
             collectionView.gemini
                 .customAnimation()
                 .backgroundColor(startColor: UIColor(red: 38 / 255, green: 194 / 255, blue: 129 / 255, alpha: 1),
@@ -91,13 +85,14 @@ final class CustomAnimationViewController: UIViewController {
         }
     }
 
-    @objc func toggleNavigationBarHidden(_ gestureRecognizer: UITapGestureRecognizer) {
+    @objc private func toggleNavigationBarHidden(_ gestureRecognizer: UITapGestureRecognizer) {
         let isNavigationBarHidden = navigationController?.isNavigationBarHidden ?? true
         navigationController?.setNavigationBarHidden(!isNavigationBarHidden, animated: true)
     }
 }
 
 // MARK: - UIScrollViewDelegate
+
 extension CustomAnimationViewController {
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         collectionView.animateVisibleCells()
@@ -105,6 +100,7 @@ extension CustomAnimationViewController {
 }
 
 // MARK: - UICollectionViewDelegate
+
 extension CustomAnimationViewController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
         if let cell = cell as? GeminiCell {
@@ -114,6 +110,7 @@ extension CustomAnimationViewController: UICollectionViewDelegate {
 }
 
 // MARK: - UICollectionViewDataSource
+
 extension CustomAnimationViewController: UICollectionViewDataSource {
     func numberOfSections(in collectionView: UICollectionView) -> Int {
         return 1
@@ -126,7 +123,6 @@ extension CustomAnimationViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellIdentifier, for: indexPath) as! ImageCollectionViewCell
 
-        // Set image only when animation type is custom1
         if animationType == .custom1 {
             cell.configure(with: images[indexPath.row])
         }

@@ -1,9 +1,8 @@
 import UIKit
 
 final class AnimationListViewController: UIViewController {
-
-    fileprivate let cellIdentifier = "tableViewCell"
-    fileprivate let sectionTitles = ["Cube",
+    private let cellIdentifier = "tableViewCell"
+    private let sectionTitles = ["Cube",
                                      "CircleRotation",
                                      "RollRotation",
                                      "PitchRotation",
@@ -11,7 +10,7 @@ final class AnimationListViewController: UIViewController {
                                      "ScaleAnimation",
                                      "Custom"]
 
-    fileprivate let cellTitles: [[String]] = [
+    private let cellTitles: [[String]] = [
         // Cube
         ["Horizontal cube",
          "Vertical cube"],
@@ -57,7 +56,7 @@ final class AnimationListViewController: UIViewController {
          "Custom animation2"]
     ]
 
-    @IBOutlet weak var tableView: UITableView! {
+    @IBOutlet private weak var tableView: UITableView! {
         didSet {
             tableView.delegate   = self
             tableView.dataSource = self
@@ -71,6 +70,7 @@ final class AnimationListViewController: UIViewController {
 }
 
 // MARK: - UITableViewDelegate
+
 extension AnimationListViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         switch (indexPath.section, indexPath.row) {
@@ -222,6 +222,7 @@ extension AnimationListViewController: UITableViewDelegate {
 }
 
 // MARK: - UITableViewDataSource
+
 extension AnimationListViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell: UITableViewCell

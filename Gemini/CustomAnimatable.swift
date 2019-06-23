@@ -7,19 +7,10 @@ extension GeminiAnimationModel {
 }
 
 public protocol CustomAnimatable: EasingAnimatable, UIAppearanceAnimatable {
-
     /// The Scale in 3-Dimensional vector.
     /// The default value is (x: 1, y: 1, z: 1).
     /// The range 0.0 to 1.0.
     @discardableResult func scale(x: CGFloat, y: CGFloat, z: CGFloat) -> CustomAnimatable
-
-    @discardableResult func scale(x: CGFloat, y: CGFloat) -> CustomAnimatable
-
-    @discardableResult func scale(x: CGFloat) -> CustomAnimatable
-
-    @discardableResult func scale(y: CGFloat) -> CustomAnimatable
-
-    @discardableResult func scale(z: CGFloat) -> CustomAnimatable
 
     @discardableResult func scaleEffect(_ effect: GeminScaleEffect) -> CustomAnimatable
 
@@ -28,25 +19,9 @@ public protocol CustomAnimatable: EasingAnimatable, UIAppearanceAnimatable {
     /// The range 0.0 to 90.0.
     @discardableResult func rotationAngle(x: CGFloat, y: CGFloat, z: CGFloat) -> CustomAnimatable
 
-    @discardableResult func rotationAngle(x: CGFloat, y: CGFloat) -> CustomAnimatable
-
-    @discardableResult func rotationAngle(x: CGFloat) -> CustomAnimatable
-
-    @discardableResult func rotationAngle(y: CGFloat) -> CustomAnimatable
-
-    @discardableResult func rotationAngle(z: CGFloat) -> CustomAnimatable
-
     /// The translation in 3-Dimensional vector.
     /// The default value is (x: 0, y: 0, z: 0).
     @discardableResult func translation(x: CGFloat, y: CGFloat, z: CGFloat) -> CustomAnimatable
-
-    @discardableResult func translation(x: CGFloat, y: CGFloat) -> CustomAnimatable
-
-    @discardableResult func translation(x: CGFloat) -> CustomAnimatable
-
-    @discardableResult func translation(y: CGFloat) -> CustomAnimatable
-
-    @discardableResult func translation(z: CGFloat) -> CustomAnimatable
 
     /// The anchor point of the layer's bounds rectangle.
     /// The default value is (x: 0.5, y: 0.5).
@@ -55,33 +30,7 @@ public protocol CustomAnimatable: EasingAnimatable, UIAppearanceAnimatable {
 }
 
 extension GeminiAnimationModel: CustomAnimatable {
-    @discardableResult
-    public func scale(x: CGFloat) -> CustomAnimatable {
-        scaleCoordinate.x = x
-        return self
-    }
-
-    @discardableResult
-    public func scale(y: CGFloat) -> CustomAnimatable {
-        scaleCoordinate.y = y
-        return self
-    }
-
-    @discardableResult
-    public func scale(z: CGFloat) -> CustomAnimatable {
-        scaleCoordinate.z = z
-        return self
-    }
-
-    @discardableResult
-    public func scale(x: CGFloat, y: CGFloat) -> CustomAnimatable {
-        scaleCoordinate.x = x
-        scaleCoordinate.y = y
-        return self
-    }
-
-    @discardableResult
-    public func scale(x: CGFloat, y: CGFloat, z: CGFloat) -> CustomAnimatable {
+    public func scale(x: CGFloat = 1, y: CGFloat = 1, z: CGFloat = 1) -> CustomAnimatable {
         scaleCoordinate.x = x
         scaleCoordinate.y = y
         scaleCoordinate.z = z
@@ -95,32 +44,7 @@ extension GeminiAnimationModel: CustomAnimatable {
     }
 
     @discardableResult
-    public func rotationAngle(x: CGFloat) -> CustomAnimatable {
-        rotationCoordinate.x = x
-        return self
-    }
-
-    @discardableResult
-    public func rotationAngle(y: CGFloat) -> CustomAnimatable {
-        rotationCoordinate.y = y
-        return self
-    }
-
-    @discardableResult
-    public func rotationAngle(z: CGFloat) -> CustomAnimatable {
-        rotationCoordinate.z = z
-        return self
-    }
-
-    @discardableResult
-    public func rotationAngle(x: CGFloat, y: CGFloat) -> CustomAnimatable {
-        rotationCoordinate.x = x
-        rotationCoordinate.y = y
-        return self
-    }
-
-    @discardableResult
-    public func rotationAngle(x: CGFloat, y: CGFloat, z: CGFloat) -> CustomAnimatable {
+    public func rotationAngle(x: CGFloat = 1, y: CGFloat = 1, z: CGFloat = 1) -> CustomAnimatable {
         rotationCoordinate.x = x
         rotationCoordinate.y = y
         rotationCoordinate.z = z
@@ -128,32 +52,7 @@ extension GeminiAnimationModel: CustomAnimatable {
     }
 
     @discardableResult
-    public func translation(x: CGFloat) -> CustomAnimatable {
-        translationCoordinate.x = x
-        return self
-    }
-
-    @discardableResult
-    public func translation(y: CGFloat) -> CustomAnimatable {
-        translationCoordinate.y = y
-        return self
-    }
-
-    @discardableResult
-    public func translation(z: CGFloat) -> CustomAnimatable {
-        translationCoordinate.z = z
-        return self
-    }
-
-    @discardableResult
-    public func translation(x: CGFloat, y: CGFloat) -> CustomAnimatable {
-        translationCoordinate.x = x
-        translationCoordinate.y = y
-        return self
-    }
-
-    @discardableResult
-    public func translation(x: CGFloat, y: CGFloat, z: CGFloat) -> CustomAnimatable {
+    public func translation(x: CGFloat = 0, y: CGFloat = 0, z: CGFloat = 0) -> CustomAnimatable {
         translationCoordinate.x = x
         translationCoordinate.y = y
         translationCoordinate.z = z

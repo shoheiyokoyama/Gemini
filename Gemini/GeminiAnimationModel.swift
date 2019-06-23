@@ -172,7 +172,7 @@ final class GeminiAnimationModel {
         let startColorComponents = startBackgroundColor?.cgColor.components ?? []
         let endColorComponents = endBackgroundColor?.cgColor.components ?? []
 
-        if startColorComponents.count < 3 || endColorComponents.count < 3 {
+        guard startColorComponents.count >= 3 && endColorComponents.count >= 3 else {
             return nil
         }
 
@@ -298,38 +298,54 @@ final class GeminiAnimationModel {
             let scaleX = calculatedScale(ofScale: scaleCoordinate.x, withRatio: easingRatio)
             let scaleY = calculatedScale(ofScale: scaleCoordinate.y, withRatio: easingRatio)
             let scaleZ = calculatedScale(ofScale: scaleCoordinate.z, withRatio: easingRatio)
-            let scaleTransform = CATransform3DScale(transform3DIdentity,
-                                                    scaleCoordinate.x == 1 ? 1 : scaleX,
-                                                    scaleCoordinate.y == 1 ? 1 : scaleY,
-                                                    scaleCoordinate.z == 1 ? 1 : scaleZ)
+            let scaleTransform = CATransform3DScale(
+                transform3DIdentity,
+                scaleCoordinate.x == 1 ? 1 : scaleX,
+                scaleCoordinate.y == 1 ? 1 : scaleY,
+                scaleCoordinate.z == 1 ? 1 : scaleZ
+            )
 
             let _vectorXDegree: CGFloat = max(0, min(90, rotationCoordinate.x))
             let vectorXDegree: CGFloat  = _vectorXDegree * easingRatio
-            let rotationX = CATransform3DRotate(transform3DIdentity,
-                                                vectorXDegree * .pi / 180,
-                                                rotationCoordinate.x == 0 ? 0 : 1, 0, 0)
+            let rotationX = CATransform3DRotate(
+                transform3DIdentity,
+                vectorXDegree * .pi / 180,
+                rotationCoordinate.x == 0 ? 0 : 1,
+                0,
+                0
+            )
 
             let _vectorYDegree: CGFloat = max(0, min(90, rotationCoordinate.y))
             let vectorYDegree: CGFloat = _vectorYDegree * easingRatio
-            let rotationY = CATransform3DRotate(transform3DIdentity,
-                                                vectorYDegree * .pi / 180,
-                                                0, rotationCoordinate.y == 0 ? 0 : 1, 0)
+            let rotationY = CATransform3DRotate(
+                transform3DIdentity,
+                vectorYDegree * .pi / 180,
+                0,
+                rotationCoordinate.y == 0 ? 0 : 1,
+                0
+            )
 
             let _vectorZDegree: CGFloat = max(0, min(90, rotationCoordinate.z))
             let vectorZDegree: CGFloat = _vectorZDegree * easingRatio
-            let rotationZ = CATransform3DRotate(transform3DIdentity,
-                                                vectorZDegree * .pi / 180,
-                                                0, 0, rotationCoordinate.z == 0 ? 0 : 1)
+            let rotationZ = CATransform3DRotate(
+                transform3DIdentity,
+                vectorZDegree * .pi / 180,
+                0,
+                0,
+                rotationCoordinate.z == 0 ? 0 : 1
+            )
 
             let concatedRotateTransform = CATransform3DConcat(rotationX, CATransform3DConcat(rotationY, rotationZ))
 
             let translateX = easingRatio > 0 ? translationCoordinate.x : -translationCoordinate.x
             let translateY = easingRatio > 0 ? translationCoordinate.y : -translationCoordinate.y
             let translateZ = easingRatio > 0 ? translationCoordinate.z : -translationCoordinate.z
-            let translateTransform = CATransform3DTranslate(transform3DIdentity,
-                                                            translateX * easingRatio,
-                                                            translateY * easingRatio,
-                                                            translateZ * easingRatio)
+            let translateTransform = CATransform3DTranslate(
+                transform3DIdentity,
+                translateX * easingRatio,
+                translateY * easingRatio,
+                translateZ * easingRatio
+            )
 
             return CATransform3DConcat(CATransform3DConcat(scaleTransform, concatedRotateTransform), translateTransform)
 
@@ -342,19 +358,28 @@ final class GeminiAnimationModel {
         switch animation {
         case .cube:
             switch scrollDirection {
-            case .vertical   where ratio > 0: return CGPoint(x: 0.5, y: 0)
-            case .vertical   where ratio < 0: return CGPoint(x: 0.5, y: 1)
-            case .horizontal where ratio > 0: return CGPoint(x: 0, y: 0.5)
-            case .horizontal where ratio < 0: return CGPoint(x: 1, y: 0.5)
-            default: return CGPoint(x: 0.5, y: 0.5)
+            case .vertical   where ratio > 0:
+                return CGPoint(x: 0.5, y: 0)
+            case .vertical   where ratio < 0:
+                return CGPoint(x: 0.5, y: 1)
+            case .horizontal where ratio > 0:
+                return CGPoint(x: 0, y: 0.5)
+            case .horizontal where ratio < 0:
+                return CGPoint(x: 1, y: 0.5)
+            default:
+                return CGPoint(x: 0.5, y: 0.5)
             }
 
         case .circleRotation:
             switch (rotateDirection, scrollDirection) {
-            case (.clockwise, .horizontal):     return CGPoint(x: 0.5, y: 0)
-            case (.anticlockwise, .horizontal): return CGPoint(x: 0.5, y: 1)
-            case (.clockwise, .vertical):       return CGPoint(x: 1, y: 0.5)
-            case (.anticlockwise, .vertical):   return CGPoint(x: 0, y: 0.5)
+            case (.clockwise, .horizontal):
+                return CGPoint(x: 0.5, y: 0)
+            case (.anticlockwise, .horizontal):
+                return CGPoint(x: 0.5, y: 1)
+            case (.clockwise, .vertical):
+                return CGPoint(x: 1, y: 0.5)
+            case (.anticlockwise, .vertical):
+                return CGPoint(x: 0, y: 0.5)
             }
 
         case .custom:
@@ -379,15 +404,19 @@ final class GeminiAnimationModel {
     func distanceRatio(withParentFrame parentFrame: CGRect, cellFrame: CGRect) -> CGFloat {
         let distance = distanceFromCenter(withParentFrame: parentFrame, cellFrame: cellFrame)
         switch scrollDirection {
-        case .vertical:   return distance / (parentFrame.height / 2 + cellFrame.height / 2)
-        case .horizontal: return distance / (parentFrame.width / 2 + cellFrame.width / 2)
+        case .vertical:
+            return distance / (parentFrame.height / 2 + cellFrame.height / 2)
+        case .horizontal:
+            return distance / (parentFrame.width / 2 + cellFrame.width / 2)
         }
     }
 
     func visibleMaxDistance(withParentFrame parentFrame: CGRect, cellFrame: CGRect) -> CGFloat {
         switch scrollDirection {
-        case .vertical:   return parentFrame.midY + cellFrame.height / 2
-        case .horizontal: return parentFrame.midX + cellFrame.width / 2
+        case .vertical:
+            return parentFrame.midY + cellFrame.height / 2
+        case .horizontal:
+            return parentFrame.midX + cellFrame.width / 2
         }
     }
 
@@ -398,8 +427,10 @@ final class GeminiAnimationModel {
     private func calculatedScale(ofScale scale: CGFloat, withRatio ratio: CGFloat) -> CGFloat {
         let scale: CGFloat = min(max(scale, 0), 1)
         switch scaleEffect {
-        case .scaleUp:   return 1 - (1 - scale) * abs(ratio)
-        case .scaleDown: return scale + (1 - scale) * abs(ratio)
+        case .scaleUp:
+            return 1 - (1 - scale) * abs(ratio)
+        case .scaleDown:
+            return scale + (1 - scale) * abs(ratio)
         }
     }
 }

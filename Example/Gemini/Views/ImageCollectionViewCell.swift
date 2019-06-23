@@ -2,9 +2,8 @@ import UIKit
 import Gemini
 
 final class ImageCollectionViewCell: GeminiCell {
-
-    @IBOutlet weak var blackShadowView: UIView!
-    @IBOutlet weak var sampleImageView: UIImageView!
+    @IBOutlet private weak var blackShadowView: UIView!
+    @IBOutlet private weak var sampleImageView: UIImageView!
 
     override var shadowView: UIView? {
         return blackShadowView

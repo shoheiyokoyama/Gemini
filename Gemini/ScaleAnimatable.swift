@@ -1,5 +1,4 @@
 public enum GeminScaleEffect {
-
     /// `scaleUp` gradually increases frame size of item.
     case scaleUp
 

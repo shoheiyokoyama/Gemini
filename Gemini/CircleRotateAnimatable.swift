@@ -1,5 +1,4 @@
 public enum CircleRotationDirection {
-
     /// Item rotate in clockwise direction.
     case clockwise
 
