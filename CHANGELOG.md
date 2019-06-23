@@ -24,6 +24,8 @@
 * Refactoring
   * [Delete header comment](https://github.com/shoheiyokoyama/Gemini/pull/27/commits/b158445496004044cd231d49c02bd3541fc52d6f)
   * [Fix syntax](https://github.com/shoheiyokoyama/Gemini/pull/27/commits/014b5ed410cb555f0db9d3420e7eefcd29b0e510)
+* [Setup Gemfile](https://github.com/shoheiyokoyama/Gemini/commit/b06397e2efe96030cb75c8e9d3ba0816668e563d)
+* [Setup Makefile](https://github.com/shoheiyokoyama/Gemini/commit/64803caa2ae5a71f6a1470ae2dc27bb3fa7d3fbb)
 
 ##### Bug Fixes
 
