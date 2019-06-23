@@ -10,7 +10,7 @@
 
 ##### Bug Fixes
 
-* None. 
+* [Fixed default values](https://github.com/shoheiyokoyama/Gemini/commit/6a37e6729df20f3f9aef590b0a3ecdafa1ca3ea5)
 
 ## [1.4.0](https://github.com/shoheiyokoyama/Gemini/releases/tag/1.4.0)
 
