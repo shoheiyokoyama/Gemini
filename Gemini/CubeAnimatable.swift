@@ -1,11 +1,3 @@
-//
-//  CubeAnimatable.swift
-//  Gemini
-//
-//  Created by shoheiyokoyama on 2017/06/12.
-//
-//
-
 public protocol CubeAnimatable: EasingAnimatable, UIAppearanceAnimatable {
 
     /// Cube degree for the x-vector in the range 0.0 to 90.0. 

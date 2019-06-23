@@ -1,11 +1,3 @@
-//
-//  CircleRotationViewController.swift
-//  Gemini
-//
-//  Created by shoheiyokoyama on 2017/06/20.
-//  Copyright © 2017年 CocoaPods. All rights reserved.
-//
-
 import UIKit
 import Gemini
 

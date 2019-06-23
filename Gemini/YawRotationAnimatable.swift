@@ -1,11 +1,3 @@
-//
-//  YawRotationAnimatable.swift
-//  Gemini
-//
-//  Created by shoheiyokoyama on 2017/06/26.
-//
-//
-
 public enum YawRotationEffect {
     case yawUp
     case yawDown

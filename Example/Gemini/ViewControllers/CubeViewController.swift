@@ -1,11 +1,3 @@
-//
-//  CubeViewController.swift
-//  Gemini
-//
-//  Created by shoheiyokoyama on 2017/06/19.
-//  Copyright © 2017年 CocoaPods. All rights reserved.
-//
-
 import UIKit
 import Gemini
 

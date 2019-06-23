@@ -87,7 +87,7 @@
 		E0F588861F094421006266A3 /* UICollectionViewPagingFlowLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UICollectionViewPagingFlowLayout.swift; sourceTree = "<group>"; };
 		E0F588891F09445E006266A3 /* ResourceModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResourceModel.swift; sourceTree = "<group>"; };
 		EEF2A7CE866B6998F9834652 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
-		F49B6109CEDA4448DCC7EEBF /* Gemini.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Gemini.podspec; path = ../Gemini.podspec; sourceTree = "<group>"; };
+		F49B6109CEDA4448DCC7EEBF /* Gemini.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Gemini.podspec; path = ../Gemini.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */

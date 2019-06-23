@@ -1,11 +1,3 @@
-//
-//  CustomAnimatable.swift
-//  Gemini
-//
-//  Created by shoheiyokoyama on 2017/06/15.
-//
-//
-
 extension GeminiAnimationModel {
     struct Coordinate {
         var x: CGFloat = 1

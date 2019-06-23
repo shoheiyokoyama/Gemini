@@ -1,11 +1,3 @@
-//
-//  AppDelegate.swift
-//  Gemini
-//
-//  Created by shoheiyokoyama on 06/10/2017.
-//  Copyright (c) 2017 shoheiyokoyama. All rights reserved.
-//
-
 import UIKit
 
 @UIApplicationMain

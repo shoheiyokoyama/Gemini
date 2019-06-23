@@ -1,11 +1,3 @@
-//
-//  CustomAnimationViewController.swift
-//  Gemini
-//
-//  Created by shoheiyokoyama on 2017/07/01.
-//  Copyright © 2017年 CocoaPods. All rights reserved.
-//
-
 import UIKit
 import Gemini
 

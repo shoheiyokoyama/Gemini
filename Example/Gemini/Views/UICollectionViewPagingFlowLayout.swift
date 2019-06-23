@@ -1,11 +1,3 @@
-//
-//  UICollectionViewPagingFlowLayout.swift
-//  Gemini
-//
-//  Created by shoheoyokoyama on 2017/07/02.
-//  Copyright © 2017年 CocoaPods. All rights reserved.
-//
-
 import UIKit
 
 final class UICollectionViewPagingFlowLayout: UICollectionViewFlowLayout {

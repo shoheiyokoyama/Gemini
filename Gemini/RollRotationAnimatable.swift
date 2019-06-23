@@ -1,11 +1,3 @@
-//
-//  RollRotationAnimatable.swift
-//  Gemini
-//
-//  Created by shoheiyokoyama on 2017/06/24.
-//
-//
-
 public enum RollRotationEffect {
     case rollUp
     case rollDown
