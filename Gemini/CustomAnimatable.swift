@@ -44,7 +44,7 @@ extension GeminiAnimationModel: CustomAnimatable {
     }
 
     @discardableResult
-    public func rotationAngle(x: CGFloat = 1, y: CGFloat = 1, z: CGFloat = 1) -> CustomAnimatable {
+    public func rotationAngle(x: CGFloat = 0, y: CGFloat = 0, z: CGFloat = 0) -> CustomAnimatable {
         rotationCoordinate.x = x
         rotationCoordinate.y = y
         rotationCoordinate.z = z
