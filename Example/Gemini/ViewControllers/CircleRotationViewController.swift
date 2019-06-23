@@ -1,16 +1,7 @@
-//
-//  CircleRotationViewController.swift
-//  Gemini
-//
-//  Created by shoheiyokoyama on 2017/06/20.
-//  Copyright © 2017年 CocoaPods. All rights reserved.
-//
-
 import UIKit
 import Gemini
 
 final class CircleRotationViewController: UIViewController {
-
     static func make(scrollDirection: UICollectionView.ScrollDirection, rotateDirection: CircleRotationDirection) -> CircleRotationViewController {
         let storyboard = UIStoryboard(name: "CircleRotationViewController", bundle: nil)
         let viewController = storyboard.instantiateViewController(withIdentifier: "CircleRotationViewController") as! CircleRotationViewController
@@ -19,14 +10,12 @@ final class CircleRotationViewController: UIViewController {
         return viewController
     }
 
-    fileprivate let cellIdentifier = "ImageCollectionViewCell"
+    private let cellIdentifier = String(describing: ImageCollectionViewCell.self)
+    private let images = Resource.image.images
+    private var scrollDirection = UICollectionView.ScrollDirection.horizontal
+    private var rotateDirection = CircleRotationDirection.clockwise
 
-    private(set) var scrollDirection: UICollectionView.ScrollDirection = .horizontal
-    private(set) var rotateDirection: CircleRotationDirection = .clockwise
-
-    fileprivate let images: [UIImage] = Resource.image.images
-
-    @IBOutlet fileprivate weak var collectionView: GeminiCollectionView! {
+    @IBOutlet private weak var collectionView: GeminiCollectionView! {
         didSet {
             let nib = UINib(nibName: cellIdentifier, bundle: nil)
             collectionView.register(nib, forCellWithReuseIdentifier: cellIdentifier)
@@ -49,26 +38,25 @@ final class CircleRotationViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Setting of UICollectionViewFlowLayout
         if let layout = collectionView.collectionViewLayout as? UICollectionViewFlowLayout {
             layout.scrollDirection = scrollDirection
             collectionView.collectionViewLayout = layout
         }
 
-        // Switch navigation bar hidden
         navigationController?.setNavigationBarHidden(true, animated: false)
         let gesture = UITapGestureRecognizer(target: self, action: #selector(toggleNavigationBarHidden(_:)))
         gesture.cancelsTouchesInView = false
         view.addGestureRecognizer(gesture)
     }
 
-    @objc func toggleNavigationBarHidden(_ gestureRecognizer: UITapGestureRecognizer) {
+    @objc private func toggleNavigationBarHidden(_ gestureRecognizer: UITapGestureRecognizer) {
         let isNavigationBarHidden = navigationController?.isNavigationBarHidden ?? true
         navigationController?.setNavigationBarHidden(!isNavigationBarHidden, animated: true)
     }
 }
 
 // MARK: - UIScrollViewDelegate
+
 extension CircleRotationViewController {
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         collectionView.animateVisibleCells()
@@ -76,6 +64,7 @@ extension CircleRotationViewController {
 }
 
 // MARK: - UICollectionViewDelegate
+
 extension CircleRotationViewController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
         if let cell = cell as? GeminiCell {
@@ -85,15 +74,16 @@ extension CircleRotationViewController: UICollectionViewDelegate {
 }
 
 // MARK: - UICollectionViewDataSource
+
 extension CircleRotationViewController: UICollectionViewDataSource {
     func numberOfSections(in collectionView: UICollectionView) -> Int {
         return 1
     }
-    
+
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return images.count
     }
-    
+
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellIdentifier, for: indexPath) as! ImageCollectionViewCell
         cell.configure(with: images[indexPath.row])
@@ -103,6 +93,7 @@ extension CircleRotationViewController: UICollectionViewDataSource {
 }
 
 // MARK: - UICollectionViewDelegateFlowLayout
+
 extension CircleRotationViewController: UICollectionViewDelegateFlowLayout {
     private enum Const {
         static let collcetionViewSize = CGSize(width: 200, height: 350)
@@ -119,14 +110,13 @@ extension CircleRotationViewController: UICollectionViewDelegateFlowLayout {
 
         switch layout.scrollDirection {
         case .horizontal:
-
             let verticalMargin: CGFloat = (collectionView.bounds.height - Const.collcetionViewSize.height) / 2
             return UIEdgeInsets(top: 50 + verticalMargin,
                                 left: 50,
                                 bottom: 50 + verticalMargin,
                                 right: 50)
-        case .vertical:
 
+        case .vertical:
             let horizontalMargin: CGFloat = (collectionView.bounds.width - Const.collcetionViewSize.width) / 2
             return UIEdgeInsets(top: 50,
                                 left: 50 + horizontalMargin,
@@ -138,7 +128,7 @@ extension CircleRotationViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
         return 10
     }
-    
+
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
         return 0
     }

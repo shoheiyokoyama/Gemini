@@ -1,11 +1,3 @@
-//
-//  UIAppearanceAnimatable.swift
-//  Gemini
-//
-//  Created by shoheiyokoyama on 2017/07/01.
-//
-//
-
 public enum ShadowEffect {
     case fadeIn
     case nextFadeIn

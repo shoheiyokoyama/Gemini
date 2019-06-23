@@ -1,17 +1,8 @@
-//
-//  CubeViewController.swift
-//  Gemini
-//
-//  Created by shoheiyokoyama on 2017/06/19.
-//  Copyright © 2017年 CocoaPods. All rights reserved.
-//
-
 import UIKit
 import Gemini
 
 final class CubeViewController: UIViewController {
-
-    @IBOutlet weak var collectionView: GeminiCollectionView! {
+    @IBOutlet private weak var collectionView: GeminiCollectionView! {
         didSet {
             let nib = UINib(nibName: cellIdentifier, bundle: nil)
             collectionView.register(nib, forCellWithReuseIdentifier: cellIdentifier)
@@ -28,11 +19,10 @@ final class CubeViewController: UIViewController {
                 .shadowEffect(.fadeIn)
         }
     }
-    fileprivate let cellIdentifier = "PlayerCollectionViewCell"
 
-    var direction: UICollectionView.ScrollDirection = .horizontal
-
-    fileprivate var movieURLs: [URL] = Resource.movie.urls
+    private let cellIdentifier = String(describing: PlayerCollectionViewCell.self)
+    private var direction: UICollectionView.ScrollDirection = .horizontal
+    private var movieURLs = Resource.movie.urls
 
     static func make(scrollDirection: UICollectionView.ScrollDirection) -> CubeViewController {
         let storyboard = UIStoryboard(name: "CubeViewController", bundle: nil)
@@ -44,31 +34,29 @@ final class CubeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Setting of UICollectionViewFlowLayout
         if let layout = collectionView.collectionViewLayout as? UICollectionViewFlowLayout {
             layout.scrollDirection = direction
             collectionView.collectionViewLayout = layout
         }
 
-        // Switch navigation bar hidden
         navigationController?.setNavigationBarHidden(true, animated: false)
         let gesture = UITapGestureRecognizer(target: self, action: #selector(toggleNavigationBarHidden(_:)))
         gesture.cancelsTouchesInView = false
         view.addGestureRecognizer(gesture)
     }
 
-    @objc func toggleNavigationBarHidden(_ gestureRecognizer: UITapGestureRecognizer) {
+    @objc private func toggleNavigationBarHidden(_ gestureRecognizer: UITapGestureRecognizer) {
         let isNavigationBarHidden = navigationController?.isNavigationBarHidden ?? true
         navigationController?.setNavigationBarHidden(!isNavigationBarHidden, animated: true)
     }
 }
 
 // MARK: - UIScrollViewDelegate
+
 extension CubeViewController {
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         collectionView.animateVisibleCells()
 
-        // Pause movie during scrolling
         collectionView.visibleCells
             .compactMap { $0 as? PlayerCollectionViewCell }
             .forEach { $0.playerView.pause() }
@@ -80,6 +68,7 @@ extension CubeViewController {
 }
 
 // MARK: - UICollectionViewDataSource
+
 extension CubeViewController: UICollectionViewDataSource {
     func numberOfSections(in collectionView: UICollectionView) -> Int {
         return 1
@@ -97,19 +86,20 @@ extension CubeViewController: UICollectionViewDataSource {
 }
 
 // MARK: - UICollectionViewDelegateFlowLayout
+
 extension CubeViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return CGSize(width: collectionView.frame.width, height: collectionView.frame.height)
     }
-    
+
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
         return .zero
     }
-    
+
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
         return 0
     }
-    
+
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
         return 0
     }

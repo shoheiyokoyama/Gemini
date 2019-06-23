@@ -12,6 +12,38 @@
 
 * None. 
 
+## [1.4.0](https://github.com/shoheiyokoyama/Gemini/releases/tag/1.4.0)
+
+##### Breaking
+
+* None.
+
+##### Enhancements
+
+* [Support Swift5](https://github.com/shoheiyokoyama/Gemini/pull/27/commits/5be4816f6c46326fef06f2edca6442422cef6121)
+* Refactoring
+  * [Delete header comment](https://github.com/shoheiyokoyama/Gemini/pull/27/commits/b158445496004044cd231d49c02bd3541fc52d6f)
+  * [Fix syntax](https://github.com/shoheiyokoyama/Gemini/pull/27/commits/014b5ed410cb555f0db9d3420e7eefcd29b0e510)
+
+##### Bug Fixes
+
+* None.
+
+## [1.3.1](https://github.com/shoheiyokoyama/Gemini/releases/tag/1.3.1)
+
+##### Breaking
+
+* None.
+
+##### Enhancements
+
+* Support compatible with Xcode 10
+* Refactoring
+
+##### Bug Fixes
+
+* None.
+
 ## [1.3.0](https://github.com/shoheiyokoyama/Gemini/releases/tag/1.3.0)
 
 ##### Breaking

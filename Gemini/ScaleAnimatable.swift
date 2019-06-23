@@ -1,13 +1,4 @@
-//
-//  ScaleAnimatable.swift
-//  Gemini
-//
-//  Created by shoheiyokoyama on 2017/06/24.
-//
-//
-
 public enum GeminScaleEffect {
-
     /// `scaleUp` gradually increases frame size of item.
     case scaleUp
 

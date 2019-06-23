@@ -1,20 +1,12 @@
-//
-//  PlayerView.swift
-//  Gemini
-//
-//  Created by shoheiyokoyama on 2017/07/02.
-//  Copyright © 2017年 CocoaPods. All rights reserved.
-//
-
 import UIKit
 import AVFoundation
 
 final class PlayerView: UIView {
-    var playerLayer: AVPlayerLayer {
+    private var playerLayer: AVPlayerLayer {
         return layer as! AVPlayerLayer
     }
 
-    var player: AVPlayer? {
+    private var player: AVPlayer? {
         return playerLayer.player
     }
 

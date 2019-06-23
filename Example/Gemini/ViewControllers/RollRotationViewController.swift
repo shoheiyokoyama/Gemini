@@ -1,17 +1,8 @@
-//
-//  RollRotationViewController.swift
-//  Gemini
-//
-//  Created by shoheiyokoyama on 2017/06/25.
-//  Copyright © 2017年 CocoaPods. All rights reserved.
-//
-
 import UIKit
 import Gemini
 
 final class RollRotationViewController: UIViewController {
-
-    @IBOutlet fileprivate weak var collectionView: GeminiCollectionView! {
+    @IBOutlet private weak var collectionView: GeminiCollectionView! {
         didSet {
             let nib = UINib(nibName: cellIdentifier, bundle: nil)
             collectionView.register(nib, forCellWithReuseIdentifier: cellIdentifier)
@@ -30,11 +21,10 @@ final class RollRotationViewController: UIViewController {
         }
     }
 
-    fileprivate let cellIdentifier = "ImageCollectionViewCell"
-    private(set) var rotationEffect: RollRotationEffect = .rollUp
-    private(set) var scrollDirection: UICollectionView.ScrollDirection = .horizontal
-    
-    fileprivate let images: [UIImage] = Resource.image.images
+    private let cellIdentifier = String(describing: ImageCollectionViewCell.self)
+    private var rotationEffect = RollRotationEffect.rollUp
+    private var scrollDirection = UICollectionView.ScrollDirection.horizontal
+    private let images = Resource.image.images
 
     static func make(scrollDirection: UICollectionView.ScrollDirection, effect: RollRotationEffect) -> RollRotationViewController {
         let storyboard = UIStoryboard(name: "RollRotationViewController", bundle: nil)
@@ -47,7 +37,6 @@ final class RollRotationViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Setting of UICollectionViewFlowLayout
         let layout = UICollectionViewPagingFlowLayout()
         layout.scrollDirection = scrollDirection
         layout.itemSize = CGSize(width: view.bounds.width - 60, height: view.bounds.height - 100)
@@ -57,13 +46,11 @@ final class RollRotationViewController: UIViewController {
         collectionView.collectionViewLayout = layout
         collectionView.decelerationRate = UIScrollView.DecelerationRate.fast
 
-        // Switch navigation bar hidden
         navigationController?.setNavigationBarHidden(true, animated: false)
         let gesture = UITapGestureRecognizer(target: self, action: #selector(toggleNavigationBarHidden(_:)))
         gesture.cancelsTouchesInView = false
         view.addGestureRecognizer(gesture)
 
-        // Setting of BackgroundColor
         let startColor = UIColor(red: 29 / 255, green: 44 / 255, blue: 76 / 255, alpha: 1)
         let endColor = UIColor(red: 3 / 255, green: 7 / 255, blue: 20 / 255, alpha: 1)
         let colors: [CGColor] = [startColor.cgColor, endColor.cgColor]
@@ -77,13 +64,14 @@ final class RollRotationViewController: UIViewController {
         super.viewDidAppear(animated)
     }
 
-    @objc func toggleNavigationBarHidden(_ gestureRecognizer: UITapGestureRecognizer) {
+    @objc private func toggleNavigationBarHidden(_ gestureRecognizer: UITapGestureRecognizer) {
         let isNavigationBarHidden = navigationController?.isNavigationBarHidden ?? true
         navigationController?.setNavigationBarHidden(!isNavigationBarHidden, animated: true)
     }
 }
 
 // MARK: - UIScrollViewDelegate
+
 extension RollRotationViewController {
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         collectionView.animateVisibleCells()
@@ -91,6 +79,7 @@ extension RollRotationViewController {
 }
 
 // MARK: - UICollectionViewDelegate
+
 extension RollRotationViewController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
         if let cell = cell as? GeminiCell {
@@ -100,15 +89,16 @@ extension RollRotationViewController: UICollectionViewDelegate {
 }
 
 // MARK: - UICollectionViewDataSource
+
 extension RollRotationViewController: UICollectionViewDataSource {
     func numberOfSections(in collectionView: UICollectionView) -> Int {
         return 1
     }
-    
+
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return images.count
     }
-    
+
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellIdentifier, for: indexPath) as! ImageCollectionViewCell
         cell.configure(with: images[indexPath.row])

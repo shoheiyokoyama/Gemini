@@ -1,11 +1,3 @@
-//
-//  EasingFunction.swift
-//  Gemini
-//
-//  Created by shoheiyokoyama on 2017/06/28.
-//
-//
-
 private typealias EasingParameter = (_ t: CGFloat, _ b: CGFloat, _ c: CGFloat, _ d: CGFloat) -> CGFloat
 
 private struct EasingFunction {

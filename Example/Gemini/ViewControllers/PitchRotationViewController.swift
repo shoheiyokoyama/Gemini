@@ -1,17 +1,8 @@
-//
-//  PitchRotationViewController.swift
-//  Gemini
-//
-//  Created by shoheiyokoyama on 2017/06/25.
-//  Copyright © 2017年 CocoaPods. All rights reserved.
-//
-
 import UIKit
 import Gemini
 
 final class PitchRotationViewController: UIViewController {
-
-    @IBOutlet fileprivate weak var collectionView: GeminiCollectionView! {
+    @IBOutlet private weak var collectionView: GeminiCollectionView! {
         didSet {
             let nib = UINib(nibName: cellIdentifier, bundle: nil)
             collectionView.register(nib, forCellWithReuseIdentifier: cellIdentifier)
@@ -30,11 +21,10 @@ final class PitchRotationViewController: UIViewController {
         }
     }
 
-    fileprivate let cellIdentifier = "ImageCollectionViewCell"
-    private(set) var rotationEffect: PitchRotationEffect = .pitchUp
-    private(set) var scrollDirection: UICollectionView.ScrollDirection = .horizontal
-
-    fileprivate let images: [UIImage] = Resource.image.images
+    private let cellIdentifier = String(describing: ImageCollectionViewCell.self)
+    private var rotationEffect = PitchRotationEffect.pitchUp
+    private var scrollDirection = UICollectionView.ScrollDirection.horizontal
+    private let images = Resource.image.images
 
     static func make(scrollDirection: UICollectionView.ScrollDirection, effect: PitchRotationEffect) -> PitchRotationViewController {
         let storyboard = UIStoryboard(name: "PitchRotationViewController", bundle: nil)
@@ -47,13 +37,11 @@ final class PitchRotationViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Switch navigation bar hidden
         navigationController?.setNavigationBarHidden(true, animated: false)
         let gesture = UITapGestureRecognizer(target: self, action: #selector(toggleNavigationBarHidden(_:)))
         gesture.cancelsTouchesInView = false
         view.addGestureRecognizer(gesture)
 
-        // Setting of UICollectionViewFlowLayout
         let layout = UICollectionViewPagingFlowLayout()
         layout.scrollDirection = scrollDirection
         layout.itemSize = CGSize(width: view.bounds.width - 60, height: view.bounds.height - 100)
@@ -63,7 +51,6 @@ final class PitchRotationViewController: UIViewController {
         collectionView.collectionViewLayout = layout
         collectionView.decelerationRate = UIScrollView.DecelerationRate.fast
 
-        // Setting of BackgroundColor
         let startColor = UIColor(red: 238 / 255, green: 156 / 255, blue: 167 / 255, alpha: 1)
         let endColor = UIColor(red: 225 / 255, green: 221 / 255, blue: 225 / 255, alpha: 1)
         let colors: [CGColor] = [startColor.cgColor, endColor.cgColor]
@@ -80,6 +67,7 @@ final class PitchRotationViewController: UIViewController {
 }
 
 // MARK: - UIScrollViewDelegate
+
 extension PitchRotationViewController {
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         collectionView.animateVisibleCells()
@@ -87,6 +75,7 @@ extension PitchRotationViewController {
 }
 
 // MARK: - UICollectionViewDelegate
+
 extension PitchRotationViewController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
         if let cell = cell as? GeminiCell {
@@ -96,6 +85,7 @@ extension PitchRotationViewController: UICollectionViewDelegate {
 }
 
 // MARK: - UICollectionViewDataSource
+
 extension PitchRotationViewController: UICollectionViewDataSource {
     func numberOfSections(in collectionView: UICollectionView) -> Int {
         return 1

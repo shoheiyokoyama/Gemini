@@ -1,13 +1,4 @@
-//
-//  CircleRotationAnimatable.swift
-//  Gemini
-//
-//  Created by shoheiyokoyama on 2017/06/12.
-//
-//
-
 public enum CircleRotationDirection {
-
     /// Item rotate in clockwise direction.
     case clockwise
 

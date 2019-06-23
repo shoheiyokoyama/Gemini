@@ -1,11 +1,3 @@
-//
-//  PitchRotationAnimatable.swift
-//  Gemini
-//
-//  Created by shoheiyokoyama on 2017/06/25.
-//
-//
-
 public enum PitchRotationEffect {
     case pitchUp
     case pitchDown

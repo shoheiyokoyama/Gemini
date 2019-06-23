@@ -1,11 +1,3 @@
-//
-//  GeminiCollectionView.swift
-//  Gemini
-//
-//  Created by shoheiyokoyama on 2017/06/10.
-//
-//
-
 import UIKit
 
 public final class GeminiCollectionView: UICollectionView {
