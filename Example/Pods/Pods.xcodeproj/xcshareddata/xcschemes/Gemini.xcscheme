@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "1000"
+   LastUpgradeVersion = "1020"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "FCD5AA9DE71943D0A20424568E1AAB6C"
+               BlueprintIdentifier = "D56AF26098455FB3935EF8E7F9588C8C"
                BuildableName = "Gemini.framework"
                BlueprintName = "Gemini"
                ReferencedContainer = "container:Pods.xcodeproj">
@@ -45,7 +45,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "FCD5AA9DE71943D0A20424568E1AAB6C"
+            BlueprintIdentifier = "D56AF26098455FB3935EF8E7F9588C8C"
             BuildableName = "Gemini.framework"
             BlueprintName = "Gemini"
             ReferencedContainer = "container:Pods.xcodeproj">
