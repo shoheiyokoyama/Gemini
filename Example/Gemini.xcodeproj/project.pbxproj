@@ -380,7 +380,7 @@
 			files = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-Gemini_Example/Pods-Gemini_Example-frameworks.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-Gemini_Example/Pods-Gemini_Example-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Gemini/Gemini.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
@@ -389,7 +389,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Gemini_Example/Pods-Gemini_Example-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Gemini_Example/Pods-Gemini_Example-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
