@@ -345,6 +345,12 @@ Shohei Yokoyama
 - [Twitter](https://twitter.com/shoheiyokoyam)
 - Gmail: shohei.yok0602@gmail.com
 
+## [GidAds](https://tracking.gitads.io/?repo=Gemini)
+
+<p align="center">
+  <img src="https://images.gitads.io/Gemini" width="500">
+</p>
+
 ## License
 
 Gemini is available under the MIT license. See the [LICENSE file](https://github.com/shoheiyokoyama/Gemini/blob/master/LICENSE) for more info.
