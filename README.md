@@ -32,6 +32,7 @@ collectionView.gemini
 )](http://mit-license.org)
 ![Swift](https://img.shields.io/badge/swift-5.0-orange.svg)
 ![pod](https://img.shields.io/badge/pod-v1.4.0-red.svg)
+[![GidAds](https://img.shields.io/badge/GidAds-Click%20here-lightgrey)](https://tracking.gitads.io/?repo=Gemini)
 
 <img src="https://github.com/shoheiyokoyama/Assets/blob/master/Gemini/demo-yaw-rotation.gif" align="right">
 
