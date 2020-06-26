@@ -2,6 +2,10 @@
   <img src="https://github.com/shoheiyokoyama/Assets/blob/master/Gemini/logo.png" width="500">
 </p>
 
+<p align="center">
+  :tada: Sponsored by <a href="https://tracking.gitads.io/?repo=Gemini">GitAds</a>
+</p>
+
 # Overview
 
 <img src="https://github.com/shoheiyokoyama/Assets/blob/master/Gemini/demo-circle-rotation.gif" align="left">
