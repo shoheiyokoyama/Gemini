@@ -353,7 +353,7 @@ Shohei Yokoyama
 ## [Sponsors](https://tracking.gitads.io/?repo=Gemini)
 
 <p align="center">
-  <img src="https://images.gitads.io/Gemini" width="500">
+  <a href="https://tracking.gitads.io/?repo=Gemini"> <img src = "https://images.gitads.io/Gemini" width="500" alt = "GitAds" /> </a>
 </p>
 
 ## License
