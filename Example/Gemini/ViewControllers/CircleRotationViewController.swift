@@ -96,11 +96,11 @@ extension CircleRotationViewController: UICollectionViewDataSource {
 
 extension CircleRotationViewController: UICollectionViewDelegateFlowLayout {
     private enum Const {
-        static let collcetionViewSize = CGSize(width: 200, height: 350)
+        static let collectionViewSize = CGSize(width: 200, height: 350)
     }
 
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return Const.collcetionViewSize
+        return Const.collectionViewSize
     }
 
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
@@ -110,14 +110,14 @@ extension CircleRotationViewController: UICollectionViewDelegateFlowLayout {
 
         switch layout.scrollDirection {
         case .horizontal:
-            let verticalMargin: CGFloat = (collectionView.bounds.height - Const.collcetionViewSize.height) / 2
+            let verticalMargin: CGFloat = (collectionView.bounds.height - Const.collectionViewSize.height) / 2
             return UIEdgeInsets(top: 50 + verticalMargin,
                                 left: 50,
                                 bottom: 50 + verticalMargin,
                                 right: 50)
 
         case .vertical:
-            let horizontalMargin: CGFloat = (collectionView.bounds.width - Const.collcetionViewSize.width) / 2
+            let horizontalMargin: CGFloat = (collectionView.bounds.width - Const.collectionViewSize.width) / 2
             return UIEdgeInsets(top: 50,
                                 left: 50 + horizontalMargin,
                                 bottom: 50,
