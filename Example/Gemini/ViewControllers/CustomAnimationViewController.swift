@@ -68,8 +68,8 @@ final class CustomAnimationViewController: UIViewController {
             collectionView.decelerationRate = UIScrollView.DecelerationRate.fast
             collectionView.gemini
                 .customAnimation()
-                .translation(y: 50)
-                .rotationAngle(y: 13)
+                .translation(x: 0, y: 50, z: 0)
+                .rotationAngle(x: 0, y: 13, z: 0)
                 .ease(.easeOutExpo)
                 .shadowEffect(.fadeIn)
                 .maxShadowAlpha(0.3)

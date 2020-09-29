@@ -122,6 +122,8 @@ extension CircleRotationViewController: UICollectionViewDelegateFlowLayout {
                                 left: 50 + horizontalMargin,
                                 bottom: 50,
                                 right: 50 + horizontalMargin)
+        @unknown default:
+            fatalError("unknown scrollDirection")
         }
     }
 
