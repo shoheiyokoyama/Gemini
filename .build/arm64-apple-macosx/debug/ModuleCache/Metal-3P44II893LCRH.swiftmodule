@@ -1,0 +1,68 @@
+---
+path:            '/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/16.4/Metal.swiftmodule/x86_64-apple-ios-simulator.swiftmodule'
+dependencies:
+  - mtime:           1683769749000000000
+    path:            '/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/16.4/Metal.swiftmodule/x86_64-apple-ios-simulator.swiftmodule'
+    size:            92912
+  - mtime:           1677966512000000000
+    path:            'usr/lib/swift/Swift.swiftmodule/x86_64-apple-ios-simulator.swiftinterface'
+    size:            2052734
+    sdk_relative:    true
+  - mtime:           1677945722000000000
+    path:            'usr/include/Darwin.apinotes'
+    size:            1133
+    sdk_relative:    true
+  - mtime:           1677974079000000000
+    path:            'usr/include/objc/ObjectiveC.apinotes'
+    size:            11147
+    sdk_relative:    true
+  - mtime:           1677975151000000000
+    path:            'System/Library/Frameworks/Security.framework/Headers/Security.apinotes'
+    size:            162
+    sdk_relative:    true
+  - mtime:           1677975779000000000
+    path:            'System/Library/Frameworks/Foundation.framework/Headers/Foundation.apinotes'
+    size:            80986
+    sdk_relative:    true
+  - mtime:           1676844662000000000
+    path:            'System/Library/Frameworks/Metal.framework/Headers/Metal.apinotes'
+    size:            71880
+    sdk_relative:    true
+  - mtime:           1677974938000000000
+    path:            'usr/lib/swift/Darwin.swiftmodule/x86_64-apple-ios-simulator.swiftinterface'
+    size:            31010
+    sdk_relative:    true
+  - mtime:           1677966530000000000
+    path:            'usr/lib/swift/_Concurrency.swiftmodule/x86_64-apple-ios-simulator.swiftinterface'
+    size:            122768
+    sdk_relative:    true
+  - mtime:           1677975034000000000
+    path:            'usr/lib/swift/_StringProcessing.swiftmodule/x86_64-apple-ios-simulator.swiftinterface'
+    size:            21735
+    sdk_relative:    true
+  - mtime:           1677975433000000000
+    path:            'System/Library/Frameworks/Combine.framework/Modules/Combine.swiftmodule/x86_64-apple-ios-simulator.swiftinterface'
+    size:            169331
+    sdk_relative:    true
+  - mtime:           1677975460000000000
+    path:            'usr/lib/swift/ObjectiveC.swiftmodule/x86_64-apple-ios-simulator.swiftinterface'
+    size:            4642
+    sdk_relative:    true
+  - mtime:           1677975514000000000
+    path:            'usr/lib/swift/Dispatch.swiftmodule/x86_64-apple-ios-simulator.swiftinterface'
+    size:            52404
+    sdk_relative:    true
+  - mtime:           1677975615000000000
+    path:            'usr/lib/swift/CoreFoundation.swiftmodule/x86_64-apple-ios-simulator.swiftinterface'
+    size:            22287
+    sdk_relative:    true
+  - mtime:           1677976044000000000
+    path:            'System/Library/Frameworks/Foundation.framework/Modules/Foundation.swiftmodule/x86_64-apple-ios-simulator.swiftinterface'
+    size:            746598
+    sdk_relative:    true
+  - mtime:           1677976335000000000
+    path:            'usr/lib/swift/Metal.swiftmodule/x86_64-apple-ios-simulator.swiftinterface'
+    size:            24612
+    sdk_relative:    true
+version:         1
+...

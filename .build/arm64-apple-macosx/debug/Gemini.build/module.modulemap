@@ -1,0 +1,4 @@
+module Gemini {
+    header "/Users/yousefzuriqi/Developer/iOS/Test Apps /Gemini/.build/arm64-apple-macosx/debug/Gemini.build/Gemini-Swift.h"
+    requires objc
+}

@@ -1,0 +1,89 @@
+{
+  "": {
+    "swift-dependencies": "/Users/yousefzuriqi/Developer/iOS/Test Apps /Gemini/.build/arm64-apple-macosx/debug/Gemini.build/master.swiftdeps"
+  },
+  "/Users/yousefzuriqi/Developer/iOS/Test Apps /Gemini/Sources/Gemini/CircleRotateAnimatable.swift": {
+    "dependencies": "/Users/yousefzuriqi/Developer/iOS/Test Apps /Gemini/.build/arm64-apple-macosx/debug/Gemini.build/CircleRotateAnimatable.d",
+    "object": "/Users/yousefzuriqi/Developer/iOS/Test Apps /Gemini/.build/arm64-apple-macosx/debug/Gemini.build/CircleRotateAnimatable.swift.o",
+    "swiftmodule": "/Users/yousefzuriqi/Developer/iOS/Test Apps /Gemini/.build/arm64-apple-macosx/debug/Gemini.build/CircleRotateAnimatable~partial.swiftmodule",
+    "swift-dependencies": "/Users/yousefzuriqi/Developer/iOS/Test Apps /Gemini/.build/arm64-apple-macosx/debug/Gemini.build/CircleRotateAnimatable.swiftdeps"
+  },
+  "/Users/yousefzuriqi/Developer/iOS/Test Apps /Gemini/Sources/Gemini/CubeAnimatable.swift": {
+    "dependencies": "/Users/yousefzuriqi/Developer/iOS/Test Apps /Gemini/.build/arm64-apple-macosx/debug/Gemini.build/CubeAnimatable.d",
+    "object": "/Users/yousefzuriqi/Developer/iOS/Test Apps /Gemini/.build/arm64-apple-macosx/debug/Gemini.build/CubeAnimatable.swift.o",
+    "swiftmodule": "/Users/yousefzuriqi/Developer/iOS/Test Apps /Gemini/.build/arm64-apple-macosx/debug/Gemini.build/CubeAnimatable~partial.swiftmodule",
+    "swift-dependencies": "/Users/yousefzuriqi/Developer/iOS/Test Apps /Gemini/.build/arm64-apple-macosx/debug/Gemini.build/CubeAnimatable.swiftdeps"
+  },
+  "/Users/yousefzuriqi/Developer/iOS/Test Apps /Gemini/Sources/Gemini/CustomAnimatable.swift": {
+    "dependencies": "/Users/yousefzuriqi/Developer/iOS/Test Apps /Gemini/.build/arm64-apple-macosx/debug/Gemini.build/CustomAnimatable.d",
+    "object": "/Users/yousefzuriqi/Developer/iOS/Test Apps /Gemini/.build/arm64-apple-macosx/debug/Gemini.build/CustomAnimatable.swift.o",
+    "swiftmodule": "/Users/yousefzuriqi/Developer/iOS/Test Apps /Gemini/.build/arm64-apple-macosx/debug/Gemini.build/CustomAnimatable~partial.swiftmodule",
+    "swift-dependencies": "/Users/yousefzuriqi/Developer/iOS/Test Apps /Gemini/.build/arm64-apple-macosx/debug/Gemini.build/CustomAnimatable.swiftdeps"
+  },
+  "/Users/yousefzuriqi/Developer/iOS/Test Apps /Gemini/Sources/Gemini/EasingAnimatable.swift": {
+    "dependencies": "/Users/yousefzuriqi/Developer/iOS/Test Apps /Gemini/.build/arm64-apple-macosx/debug/Gemini.build/EasingAnimatable.d",
+    "object": "/Users/yousefzuriqi/Developer/iOS/Test Apps /Gemini/.build/arm64-apple-macosx/debug/Gemini.build/EasingAnimatable.swift.o",
+    "swiftmodule": "/Users/yousefzuriqi/Developer/iOS/Test Apps /Gemini/.build/arm64-apple-macosx/debug/Gemini.build/EasingAnimatable~partial.swiftmodule",
+    "swift-dependencies": "/Users/yousefzuriqi/Developer/iOS/Test Apps /Gemini/.build/arm64-apple-macosx/debug/Gemini.build/EasingAnimatable.swiftdeps"
+  },
+  "/Users/yousefzuriqi/Developer/iOS/Test Apps /Gemini/Sources/Gemini/EasingFunction.swift": {
+    "dependencies": "/Users/yousefzuriqi/Developer/iOS/Test Apps /Gemini/.build/arm64-apple-macosx/debug/Gemini.build/EasingFunction.d",
+    "object": "/Users/yousefzuriqi/Developer/iOS/Test Apps /Gemini/.build/arm64-apple-macosx/debug/Gemini.build/EasingFunction.swift.o",
+    "swiftmodule": "/Users/yousefzuriqi/Developer/iOS/Test Apps /Gemini/.build/arm64-apple-macosx/debug/Gemini.build/EasingFunction~partial.swiftmodule",
+    "swift-dependencies": "/Users/yousefzuriqi/Developer/iOS/Test Apps /Gemini/.build/arm64-apple-macosx/debug/Gemini.build/EasingFunction.swiftdeps"
+  },
+  "/Users/yousefzuriqi/Developer/iOS/Test Apps /Gemini/Sources/Gemini/GeminiAnimationModel.swift": {
+    "dependencies": "/Users/yousefzuriqi/Developer/iOS/Test Apps /Gemini/.build/arm64-apple-macosx/debug/Gemini.build/GeminiAnimationModel.d",
+    "object": "/Users/yousefzuriqi/Developer/iOS/Test Apps /Gemini/.build/arm64-apple-macosx/debug/Gemini.build/GeminiAnimationModel.swift.o",
+    "swiftmodule": "/Users/yousefzuriqi/Developer/iOS/Test Apps /Gemini/.build/arm64-apple-macosx/debug/Gemini.build/GeminiAnimationModel~partial.swiftmodule",
+    "swift-dependencies": "/Users/yousefzuriqi/Developer/iOS/Test Apps /Gemini/.build/arm64-apple-macosx/debug/Gemini.build/GeminiAnimationModel.swiftdeps"
+  },
+  "/Users/yousefzuriqi/Developer/iOS/Test Apps /Gemini/Sources/Gemini/GeminiCell.swift": {
+    "dependencies": "/Users/yousefzuriqi/Developer/iOS/Test Apps /Gemini/.build/arm64-apple-macosx/debug/Gemini.build/GeminiCell.d",
+    "object": "/Users/yousefzuriqi/Developer/iOS/Test Apps /Gemini/.build/arm64-apple-macosx/debug/Gemini.build/GeminiCell.swift.o",
+    "swiftmodule": "/Users/yousefzuriqi/Developer/iOS/Test Apps /Gemini/.build/arm64-apple-macosx/debug/Gemini.build/GeminiCell~partial.swiftmodule",
+    "swift-dependencies": "/Users/yousefzuriqi/Developer/iOS/Test Apps /Gemini/.build/arm64-apple-macosx/debug/Gemini.build/GeminiCell.swiftdeps"
+  },
+  "/Users/yousefzuriqi/Developer/iOS/Test Apps /Gemini/Sources/Gemini/GeminiCollectionView.swift": {
+    "dependencies": "/Users/yousefzuriqi/Developer/iOS/Test Apps /Gemini/.build/arm64-apple-macosx/debug/Gemini.build/GeminiCollectionView.d",
+    "object": "/Users/yousefzuriqi/Developer/iOS/Test Apps /Gemini/.build/arm64-apple-macosx/debug/Gemini.build/GeminiCollectionView.swift.o",
+    "swiftmodule": "/Users/yousefzuriqi/Developer/iOS/Test Apps /Gemini/.build/arm64-apple-macosx/debug/Gemini.build/GeminiCollectionView~partial.swiftmodule",
+    "swift-dependencies": "/Users/yousefzuriqi/Developer/iOS/Test Apps /Gemini/.build/arm64-apple-macosx/debug/Gemini.build/GeminiCollectionView.swiftdeps"
+  },
+  "/Users/yousefzuriqi/Developer/iOS/Test Apps /Gemini/Sources/Gemini/PitchRotationAnimatable.swift": {
+    "dependencies": "/Users/yousefzuriqi/Developer/iOS/Test Apps /Gemini/.build/arm64-apple-macosx/debug/Gemini.build/PitchRotationAnimatable.d",
+    "object": "/Users/yousefzuriqi/Developer/iOS/Test Apps /Gemini/.build/arm64-apple-macosx/debug/Gemini.build/PitchRotationAnimatable.swift.o",
+    "swiftmodule": "/Users/yousefzuriqi/Developer/iOS/Test Apps /Gemini/.build/arm64-apple-macosx/debug/Gemini.build/PitchRotationAnimatable~partial.swiftmodule",
+    "swift-dependencies": "/Users/yousefzuriqi/Developer/iOS/Test Apps /Gemini/.build/arm64-apple-macosx/debug/Gemini.build/PitchRotationAnimatable.swiftdeps"
+  },
+  "/Users/yousefzuriqi/Developer/iOS/Test Apps /Gemini/Sources/Gemini/RollRotationAnimatable.swift": {
+    "dependencies": "/Users/yousefzuriqi/Developer/iOS/Test Apps /Gemini/.build/arm64-apple-macosx/debug/Gemini.build/RollRotationAnimatable.d",
+    "object": "/Users/yousefzuriqi/Developer/iOS/Test Apps /Gemini/.build/arm64-apple-macosx/debug/Gemini.build/RollRotationAnimatable.swift.o",
+    "swiftmodule": "/Users/yousefzuriqi/Developer/iOS/Test Apps /Gemini/.build/arm64-apple-macosx/debug/Gemini.build/RollRotationAnimatable~partial.swiftmodule",
+    "swift-dependencies": "/Users/yousefzuriqi/Developer/iOS/Test Apps /Gemini/.build/arm64-apple-macosx/debug/Gemini.build/RollRotationAnimatable.swiftdeps"
+  },
+  "/Users/yousefzuriqi/Developer/iOS/Test Apps /Gemini/Sources/Gemini/ScaleAnimatable.swift": {
+    "dependencies": "/Users/yousefzuriqi/Developer/iOS/Test Apps /Gemini/.build/arm64-apple-macosx/debug/Gemini.build/ScaleAnimatable.d",
+    "object": "/Users/yousefzuriqi/Developer/iOS/Test Apps /Gemini/.build/arm64-apple-macosx/debug/Gemini.build/ScaleAnimatable.swift.o",
+    "swiftmodule": "/Users/yousefzuriqi/Developer/iOS/Test Apps /Gemini/.build/arm64-apple-macosx/debug/Gemini.build/ScaleAnimatable~partial.swiftmodule",
+    "swift-dependencies": "/Users/yousefzuriqi/Developer/iOS/Test Apps /Gemini/.build/arm64-apple-macosx/debug/Gemini.build/ScaleAnimatable.swiftdeps"
+  },
+  "/Users/yousefzuriqi/Developer/iOS/Test Apps /Gemini/Sources/Gemini/UIAppearanceAnimatable.swift": {
+    "dependencies": "/Users/yousefzuriqi/Developer/iOS/Test Apps /Gemini/.build/arm64-apple-macosx/debug/Gemini.build/UIAppearanceAnimatable.d",
+    "object": "/Users/yousefzuriqi/Developer/iOS/Test Apps /Gemini/.build/arm64-apple-macosx/debug/Gemini.build/UIAppearanceAnimatable.swift.o",
+    "swiftmodule": "/Users/yousefzuriqi/Developer/iOS/Test Apps /Gemini/.build/arm64-apple-macosx/debug/Gemini.build/UIAppearanceAnimatable~partial.swiftmodule",
+    "swift-dependencies": "/Users/yousefzuriqi/Developer/iOS/Test Apps /Gemini/.build/arm64-apple-macosx/debug/Gemini.build/UIAppearanceAnimatable.swiftdeps"
+  },
+  "/Users/yousefzuriqi/Developer/iOS/Test Apps /Gemini/Sources/Gemini/UIViewExtension.swift": {
+    "dependencies": "/Users/yousefzuriqi/Developer/iOS/Test Apps /Gemini/.build/arm64-apple-macosx/debug/Gemini.build/UIViewExtension.d",
+    "object": "/Users/yousefzuriqi/Developer/iOS/Test Apps /Gemini/.build/arm64-apple-macosx/debug/Gemini.build/UIViewExtension.swift.o",
+    "swiftmodule": "/Users/yousefzuriqi/Developer/iOS/Test Apps /Gemini/.build/arm64-apple-macosx/debug/Gemini.build/UIViewExtension~partial.swiftmodule",
+    "swift-dependencies": "/Users/yousefzuriqi/Developer/iOS/Test Apps /Gemini/.build/arm64-apple-macosx/debug/Gemini.build/UIViewExtension.swiftdeps"
+  },
+  "/Users/yousefzuriqi/Developer/iOS/Test Apps /Gemini/Sources/Gemini/YawRotationAnimatable.swift": {
+    "dependencies": "/Users/yousefzuriqi/Developer/iOS/Test Apps /Gemini/.build/arm64-apple-macosx/debug/Gemini.build/YawRotationAnimatable.d",
+    "object": "/Users/yousefzuriqi/Developer/iOS/Test Apps /Gemini/.build/arm64-apple-macosx/debug/Gemini.build/YawRotationAnimatable.swift.o",
+    "swiftmodule": "/Users/yousefzuriqi/Developer/iOS/Test Apps /Gemini/.build/arm64-apple-macosx/debug/Gemini.build/YawRotationAnimatable~partial.swiftmodule",
+    "swift-dependencies": "/Users/yousefzuriqi/Developer/iOS/Test Apps /Gemini/.build/arm64-apple-macosx/debug/Gemini.build/YawRotationAnimatable.swiftdeps"
+  }
+}
