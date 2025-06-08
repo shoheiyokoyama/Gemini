@@ -49,13 +49,13 @@ collectionView.gemini
 - [x] And More...
 
 # Contents
-- [Animation Types and properties](#anmation-types)
+- [Animation Types and properties](#animation-types)
 - [Usage](#usage)
 - [Requirements](#requirements)
 - [Installation](#installation)
 - [Author](#author)
 
-# <a name="anmation-types"> Animation Types and properties
+# <a name="animation-types"> Animation Types and properties
 
 The following animation types are available. See sample code [here](https://github.com/shoheiyokoyama/Gemini/tree/master/Example/Gemini) for details.
 
