@@ -29,12 +29,12 @@ final class AnimationListViewController: UIViewController {
          "Vertical sine wave",
          "Vertical reverse sine wave"],
         // Pitch rotation
-        ["Horizontal pictch up",
-         "Horizontal pictch down",
+        ["Horizontal pitch up",
+         "Horizontal pitch down",
          "Horizontal sine wave",
          "Horizontal reverse sine wave",
-         "Vertical pictch up",
-         "Vertical pictch down",
+         "Vertical pitch up",
+         "Vertical pitch down",
          "Vertical sine wave",
          "Vertical reverse sine wave"],
         // Yaw rotation
