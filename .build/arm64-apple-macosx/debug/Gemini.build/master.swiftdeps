@@ -1,0 +1,19 @@
+version: "Apple Swift version 5.8.1 (swiftlang-5.8.0.124.5 clang-1403.0.22.11.100)"
+options: "44baabf0ab3026732e87b8c7a6ce008b719be1576267d2a54d6c3f2aa9f7cb73"
+build_start_time: [1693142554, 874177000]
+build_end_time: [1693142557, 670541000]
+inputs:
+  "/Users/yousefzuriqi/Developer/iOS/Test Apps /Gemini/Sources/Gemini/CircleRotateAnimatable.swift": [1693142054, 426981827]
+  "/Users/yousefzuriqi/Developer/iOS/Test Apps /Gemini/Sources/Gemini/CubeAnimatable.swift": [1693142053, 483026335]
+  "/Users/yousefzuriqi/Developer/iOS/Test Apps /Gemini/Sources/Gemini/CustomAnimatable.swift": [1693142052, 946236894]
+  "/Users/yousefzuriqi/Developer/iOS/Test Apps /Gemini/Sources/Gemini/EasingAnimatable.swift": [1693142052, 347186850]
+  "/Users/yousefzuriqi/Developer/iOS/Test Apps /Gemini/Sources/Gemini/EasingFunction.swift": [1693142051, 611323981]
+  "/Users/yousefzuriqi/Developer/iOS/Test Apps /Gemini/Sources/Gemini/GeminiAnimationModel.swift": [1693142050, 897708010]
+  "/Users/yousefzuriqi/Developer/iOS/Test Apps /Gemini/Sources/Gemini/GeminiCell.swift": [1693142050, 88493046]
+  "/Users/yousefzuriqi/Developer/iOS/Test Apps /Gemini/Sources/Gemini/GeminiCollectionView.swift": [1693142048, 986480789]
+  "/Users/yousefzuriqi/Developer/iOS/Test Apps /Gemini/Sources/Gemini/PitchRotationAnimatable.swift": [1693142048, 381861604]
+  "/Users/yousefzuriqi/Developer/iOS/Test Apps /Gemini/Sources/Gemini/RollRotationAnimatable.swift": [1693142047, 770848358]
+  "/Users/yousefzuriqi/Developer/iOS/Test Apps /Gemini/Sources/Gemini/ScaleAnimatable.swift": [1693142047, 85452347]
+  "/Users/yousefzuriqi/Developer/iOS/Test Apps /Gemini/Sources/Gemini/UIAppearanceAnimatable.swift": [1693142046, 409944450]
+  "/Users/yousefzuriqi/Developer/iOS/Test Apps /Gemini/Sources/Gemini/UIViewExtension.swift": [1693142045, 582329139]
+  "/Users/yousefzuriqi/Developer/iOS/Test Apps /Gemini/Sources/Gemini/YawRotationAnimatable.swift": [1693142044, 71477198]

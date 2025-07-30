@@ -319,6 +319,10 @@ To run the example project, clone the repo, and run `pod install` from the Examp
 
 ## <a name="installation"> Installation
 
+### Swift Package Manager
+
+Gemini is available through Swift Package manager. Just copy the repo and paste it in swift package manager to download. 
+
 ### CocoaPods
 
 Gemini is available through [CocoaPods](http://cocoapods.org). To install

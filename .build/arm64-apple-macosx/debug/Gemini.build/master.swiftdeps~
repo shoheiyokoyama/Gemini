@@ -1,0 +1,19 @@
+version: "Apple Swift version 5.8.1 (swiftlang-5.8.0.124.5 clang-1403.0.22.11.100)"
+options: "10ed50d3254ceb2011ffb93e57a57b8c9f78d8c3754e00ec1d983a03d7a001dd"
+build_start_time: [1693141873, 958551000]
+build_end_time: [1693141875, 892563000]
+inputs:
+  "/Users/yousefzuriqi/Developer/iOS/Test Apps /Gemini/Sources/Gemini/CircleRotateAnimatable.swift": !private [1693139956, 917538851]
+  "/Users/yousefzuriqi/Developer/iOS/Test Apps /Gemini/Sources/Gemini/CubeAnimatable.swift": !private [1693139956, 917610643]
+  "/Users/yousefzuriqi/Developer/iOS/Test Apps /Gemini/Sources/Gemini/CustomAnimatable.swift": !private [1693139956, 917680602]
+  "/Users/yousefzuriqi/Developer/iOS/Test Apps /Gemini/Sources/Gemini/EasingAnimatable.swift": !private [1693139956, 917740768]
+  "/Users/yousefzuriqi/Developer/iOS/Test Apps /Gemini/Sources/Gemini/EasingFunction.swift": !private [1693139956, 917816852]
+  "/Users/yousefzuriqi/Developer/iOS/Test Apps /Gemini/Sources/Gemini/GeminiAnimationModel.swift": !private [1693140490, 228010322]
+  "/Users/yousefzuriqi/Developer/iOS/Test Apps /Gemini/Sources/Gemini/GeminiCell.swift": !private [1693139956, 918006978]
+  "/Users/yousefzuriqi/Developer/iOS/Test Apps /Gemini/Sources/Gemini/GeminiCollectionView.swift": !private [1693139956, 918083645]
+  "/Users/yousefzuriqi/Developer/iOS/Test Apps /Gemini/Sources/Gemini/PitchRotationAnimatable.swift": !private [1693139956, 918149520]
+  "/Users/yousefzuriqi/Developer/iOS/Test Apps /Gemini/Sources/Gemini/RollRotationAnimatable.swift": !private [1693139956, 918219979]
+  "/Users/yousefzuriqi/Developer/iOS/Test Apps /Gemini/Sources/Gemini/ScaleAnimatable.swift": !private [1693139956, 918282813]
+  "/Users/yousefzuriqi/Developer/iOS/Test Apps /Gemini/Sources/Gemini/UIAppearanceAnimatable.swift": !private [1693139956, 918343480]
+  "/Users/yousefzuriqi/Developer/iOS/Test Apps /Gemini/Sources/Gemini/UIViewExtension.swift": !private [1693139956, 918399605]
+  "/Users/yousefzuriqi/Developer/iOS/Test Apps /Gemini/Sources/Gemini/YawRotationAnimatable.swift": !private [1693139956, 918468605]
